@@ -17,7 +17,7 @@ namespace Itcast.Net.Phone.InteropServices
             string subject, string body)
         {
             MailMessage mailMsg = new MailMessage();//两个类，别混了 引入System.Web这个Assembly
-            mailMsg.From = new MailAddress(from,"传智播客.Net培训WP7模拟器");//源邮件地址 
+            mailMsg.From = new MailAddress(from,"WP7模拟器");//源邮件地址 
             mailMsg.To.Add(new MailAddress(to));//目的邮件地址。可以有多个收件人
             mailMsg.Subject = subject;//发送邮件的标题 
             mailMsg.Body = body;//发送邮件的内容 
