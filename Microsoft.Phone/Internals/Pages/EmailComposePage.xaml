@@ -1,0 +1,26 @@
+﻿<phone:PhoneApplicationPage x:Class="Microsoft.Phone.Internals.Pages.EmailComposePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    mc:Ignorable="d"
+    d:DesignHeight="390" d:DesignWidth="228">
+    
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <TextBlock Height="35" HorizontalAlignment="Left" Margin="12,12,0,0" Name="textBlock1" Text="Email Compose" VerticalAlignment="Top" Width="185" FontSize="22" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="12,53,0,0" Name="textBlock2" Text="To" VerticalAlignment="Top" Width="113" />
+        <TextBox Height="46" HorizontalAlignment="Left" Margin="5,82,0,0" Name="txtTo" VerticalAlignment="Top" Width="218" Tag="EmailNameOrAddress" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="12,134,0,0" Name="textBlock3" Text="Subject" VerticalAlignment="Top" Width="113" />
+        <TextBox Height="46" Margin="7,163,12,0" Name="txtSubject" VerticalAlignment="Top" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="12,215,0,0" Name="textBlock4" Text="Body" VerticalAlignment="Top" />
+        <TextBox Height="92" HorizontalAlignment="Left" Margin="7,236,0,0" Name="txtBody" VerticalAlignment="Top" Width="209" TextWrapping="Wrap" AcceptsReturn="True" />
+    </Grid>
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsMenuEnabled="True" IsVisible="True">
+            <shell:ApplicationBarIconButton IconUri="/Microsoft.Phone;component/Internals/icons/appbar.check.rest.png" Text="OK" Click="btnOK_Click" />
+            <shell:ApplicationBarIconButton IconUri="/Microsoft.Phone;component/Internals/icons/appbar.close.rest.png" Text="Cancel" Click="btnCancel_Click" />
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+</phone:PhoneApplicationPage>

@@ -1,0 +1,58 @@
+﻿<phone:PhoneApplicationPage x:Class="WP7SimulatorApp.DemoPage1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    mc:Ignorable="d"
+    d:DesignHeight="390" d:DesignWidth="228">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        
+        <!--ContentPanel - place additional content here-->
+        <ListBox Height="366" HorizontalAlignment="Left" 
+                 Margin="12,12,0,0" Name="listBox1" 
+                 VerticalAlignment="Top" Width="204" SelectionChanged="listBox1_SelectionChanged">
+            <ListBox.Items>
+                <ListBoxItem Tag="/maps/LoginPage.xaml">BingMaps和GPS</ListBoxItem>
+                <ListBoxItem Tag="/RadioTestPage.xaml">收音机</ListBoxItem>
+                <ListBoxItem Tag="/Test1/RecorderPage.xaml">录音机</ListBoxItem>
+                <ListBoxItem Tag="/QuanJingPage1.xaml">全景视图</ListBoxItem>
+                <ListBoxItem Tag="/Test1/PivotTestPage1.xaml">枢轴视图</ListBoxItem>
+                <ListBoxItem Tag="/Demo/AccelerometerPage1.xaml">加速度</ListBoxItem>                
+                <ListBoxItem Tag="/Demo/TasksPage1.xaml">常用Task</ListBoxItem>
+                <ListBoxItem Tag="/Demo/CameraTaskPage1.xaml">CameraTask</ListBoxItem>
+                <ListBoxItem Tag="/PhotoChooserTaskTestPage1.xaml">PhotoChooserTask</ListBoxItem>
+                <ListBoxItem Tag="/Test1/AppBarTestPage1.xaml">ApplicationBar</ListBoxItem>
+                <ListBoxItem Tag="/Test1/KeyboardTestPage.xaml">InputScope键盘</ListBoxItem>
+                <ListBoxItem Tag="/Test1/MLTestPage.xaml">XNA媒体库</ListBoxItem>
+                <ListBoxItem Tag="/Demo/MLPicsPage1.xaml">保存图片</ListBoxItem>
+                <ListBoxItem Tag="/Test1/ExtPropPage.xaml">扩展属性</ListBoxItem>
+                <ListBoxItem Tag="/Test2/PopupPage1.xaml">Popup</ListBoxItem>
+                <ListBoxItem Tag="/Test2/ToolkitTest1.xaml">Toolkit控件</ListBoxItem>
+                <ListBoxItem Tag="/Test2/TouchPanelPage1.xaml">XNATouchPanel</ListBoxItem>
+                <ListBoxItem Tag="/Demo/DateTimePickerPage1.xaml">DateTimePicker</ListBoxItem>
+                <ListBoxItem Tag="/Demo/ToggleSwitchPage1.xaml">ToggleSwitch</ListBoxItem>
+                <ListBoxItem Tag="/Demo/VibrateCtrlPage1.xaml">振动器</ListBoxItem>
+                <ListBoxItem Tag="/Test1/NetWorkStopwatchPage1.xaml">网络信息及秒表</ListBoxItem>
+                <ListBoxItem Tag="/Demo/TombStonePage1.xaml">TombStone墓碑</ListBoxItem>
+                <ListBoxItem Tag="/Demo/IsolatedStoragePage1.xaml">IsolatedStorage独立存储</ListBoxItem>
+                <ListBoxItem Tag="/Demo/ManTestPage1.xaml">Manipulation1</ListBoxItem>
+            </ListBox.Items>
+        </ListBox>
+    </Grid>
+
+    <!--Sample code showing usage of ApplicationBar-->
+    <!--<phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" Text="Button 1"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="Button 2"/>
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="MenuItem 1"/>
+                <shell:ApplicationBarMenuItem Text="MenuItem 2"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>-->
+</phone:PhoneApplicationPage>

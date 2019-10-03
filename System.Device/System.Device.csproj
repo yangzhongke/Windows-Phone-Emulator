@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7E91DB87-246D-4663-9DEC-C4C242E9CC5C}</ProjectGuid>
+    <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>System.Device</RootNamespace>
+    <AssemblyName>System.Device</AssemblyName>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>false</SilverlightApplication>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+  </PropertyGroup>
+  <!-- This property group is only here to support building this project using the 
+       MSBuild 3.5 toolset. In order to work correctly with this older toolset, it needs 
+       to set the TargetFrameworkVersion to v3.5 -->
+  <PropertyGroup Condition="'$(MSBuildToolsVersion)' == '3.5'">
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\WP7SimulatorAppTemplate\lib\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Maps.MapControl, Version=1.0.1.0, Culture=neutral, PublicKeyToken=498d0d22d7936b73, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Maps.MapControl.Common, Version=1.0.1.0, Culture=neutral, PublicKeyToken=498d0d22d7936b73, processorArchitecture=MSIL" />
+    <Reference Include="mscorlib" />
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Windows.Browser" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Location\GeoCoordinate.cs" />
+    <Compile Include="Location\GeoCoordinateWatcher.cs" />
+    <Compile Include="Location\GeoPosition.cs" />
+    <Compile Include="Location\GeoPositionAccuracy.cs" />
+    <Compile Include="Location\GeoPositionChangedEventArgs.cs" />
+    <Compile Include="Location\GeoPositionPermission.cs" />
+    <Compile Include="Location\GeoPositionStatus.cs" />
+    <Compile Include="Location\GeoPositionStatusChangedEventArgs.cs" />
+    <Compile Include="Location\IGeoPositionWatcher.cs" />
+    <Compile Include="Location\Internals\AboutCommand.cs" />
+    <Compile Include="Location\Internals\ClearRouteCommand.cs" />
+    <Compile Include="Location\Internals\CommonHelper.cs" />
+    <Compile Include="Location\Internals\ItcastMode.cs" />
+    <Compile Include="Location\Internals\ItcastTileSource.cs" />
+    <Compile Include="Location\Internals\MapCtrlBoard.xaml.cs">
+      <DependentUpon>MapCtrlBoard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Location\Internals\MapSettings.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="library\Microsoft.Maps.MapControl.Common.dll" />
+    <Content Include="library\Microsoft.Maps.MapControl.Common.xml" />
+    <Content Include="library\Microsoft.Maps.MapControl.dll" />
+    <Content Include="library\Microsoft.Maps.MapControl.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Location\Internals\MapCtrlBoard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{A1591282-1198-4647-A2B1-27E5FF5F6F3B}">
+        <SilverlightProjectProperties />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

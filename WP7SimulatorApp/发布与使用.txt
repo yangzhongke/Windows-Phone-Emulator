@@ -1,0 +1,4 @@
+﻿1、因为所有项目都是生成到了WP7SimulatorAppTemplate中，所以如果增加了新的项目，则需要将生成的dll添加到项目中。
+2、项目WP7SimulatorAppTemplate和模板PhonePageTemplate.xaml导出后分别复制到C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Templates\ProjectTemplates\Visual C#和C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Templates\ProjectTemplates\Visual C#下。
+3、用向导生成的项目需要到项目属性中，勾掉再勾上“运载运行在浏览器外”，这个配置是保存在csproj.user里面，默认没有包含在模板中。如果用上了mp3播放、发送邮件，还需要运行项目\lib下的reg.bat
+4、使用tileserver的时候要把tiles文件设置为虚拟根目录。在settings中修改了TileServer地址以后需要重启模拟器。

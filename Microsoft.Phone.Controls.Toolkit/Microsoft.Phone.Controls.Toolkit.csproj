@@ -1,0 +1,292 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7B815200-67BD-4F01-8E32-B1324E5ED154}</ProjectGuid>
+    <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Microsoft.Phone.Controls.Toolkit</RootNamespace>
+    <AssemblyName>Microsoft.Phone.Controls.Toolkit</AssemblyName>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>false</SilverlightApplication>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+  </PropertyGroup>
+  <!-- This property group is only here to support building this project using the 
+       MSBuild 3.5 toolset. In order to work correctly with this older toolset, it needs 
+       to set the TargetFrameworkVersion to v3.5 -->
+  <PropertyGroup Condition="'$(MSBuildToolsVersion)' == '3.5'">
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\WP7SimulatorAppTemplate\lib\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Controls.Navigation, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Windows.Browser" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\BindingEvaluator.cs" />
+    <Compile Include="Common\Extensions.cs" />
+    <Compile Include="Common\InteractionHelper.cs" />
+    <Compile Include="Common\ItemsControlHelper.cs" />
+    <Compile Include="Common\IUpdateVisualState.cs" />
+    <Compile Include="Common\LengthConverter.cs" />
+    <Compile Include="Common\MathHelpers.cs" />
+    <Compile Include="Common\NumericExtensions.cs" />
+    <Compile Include="Common\PhoneHelper.cs" />
+    <Compile Include="Common\PhysicsConstants.cs" />
+    <Compile Include="Common\RoutedPropertyChangingEventArgs.cs" />
+    <Compile Include="Common\RoutedPropertyChangingEventHandler.cs" />
+    <Compile Include="Common\SafeRaise.cs" />
+    <Compile Include="Common\TimeTypeConverter.cs" />
+    <Compile Include="Common\Tuple.cs" />
+    <Compile Include="Common\TypeConverters.cs" />
+    <Compile Include="Common\VisualStates.cs" />
+    <Compile Include="Common\VisualTreeExtensions.cs" />
+    <Compile Include="Common\WeakEventListener.cs" />
+    <Compile Include="ContextMenu\ContextMenu.cs" />
+    <Compile Include="ContextMenu\ContextMenuService.cs" />
+    <Compile Include="ContextMenu\MenuBase.cs" />
+    <Compile Include="ContextMenu\MenuItem.cs" />
+    <Compile Include="ContextMenu\Separator.cs" />
+    <Compile Include="Data\HierarchicalDataTemplate.cs" />
+    <Compile Include="DateTimePickers\DataSource.cs" />
+    <Compile Include="DateTimePickers\DatePicker.cs" />
+    <Compile Include="DateTimePickers\DatePickerPage.xaml.cs">
+      <DependentUpon>DatePickerPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DateTimePickers\DateTimePickerBase.cs" />
+    <Compile Include="DateTimePickers\DateTimePickerPageBase.cs" />
+    <Compile Include="DateTimePickers\DateTimePickerResources.cs" />
+    <Compile Include="DateTimePickers\DateTimeValueChangedEventArgs.cs" />
+    <Compile Include="DateTimePickers\DateTimeWrapper.cs" />
+    <Compile Include="DateTimePickers\IDateTimePickerPage.cs" />
+    <Compile Include="DateTimePickers\TimePicker.cs" />
+    <Compile Include="DateTimePickers\TimePickerPage.xaml.cs">
+      <DependentUpon>TimePickerPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HeaderedItemsControl\HeaderedItemsControl.cs" />
+    <Compile Include="ListPicker\ListPicker.cs" />
+    <Compile Include="ListPicker\ListPickerItem.cs" />
+    <Compile Include="ListPicker\ListPickerMode.cs" />
+    <Compile Include="Primitives\LoopingSelector.cs" />
+    <Compile Include="Primitives\LoopingSelectorDataSource.cs" />
+    <Compile Include="Primitives\LoopingSelectorItem.cs" />
+    <Compile Include="Primitives\ToggleSwitchButton.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources.Designer.cs" />
+    <Compile Include="ToggleSwitch\OffOnConverter.cs" />
+    <Compile Include="ToggleSwitch\ToggleSwitch.cs" />
+    <Compile Include="Transitions\ITransition.cs" />
+    <Compile Include="Transitions\NavigationInTransition.cs" />
+    <Compile Include="Transitions\NavigationOutTransition.cs" />
+    <Compile Include="Transitions\NavigationTransition.cs" />
+    <Compile Include="Transitions\TransitionElement.cs" />
+    <Compile Include="Transitions\TransitionFrame.cs" />
+    <Compile Include="Transitions\Transitions.cs" />
+    <Compile Include="Transitions\TransitionService.cs" />
+    <Compile Include="Transitions\Transitions\RollTransition.cs" />
+    <Compile Include="Transitions\Transitions\RotateTransition.cs" />
+    <Compile Include="Transitions\Transitions\RotateTransitionMode.cs" />
+    <Compile Include="Transitions\Transitions\SlideTransition.cs" />
+    <Compile Include="Transitions\Transitions\SlideTransitionMode.cs" />
+    <Compile Include="Transitions\Transitions\SwivelTransition.cs" />
+    <Compile Include="Transitions\Transitions\SwivelTransitionMode.cs" />
+    <Compile Include="Transitions\Transitions\Transition.cs" />
+    <Compile Include="Transitions\Transitions\TurnstileTransition.cs" />
+    <Compile Include="Transitions\Transitions\TurnstileTransitionMode.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="DateTimePickers\DatePickerPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DateTimePickers\TimePickerPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Transitions\Storyboards\Roll.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Transitions\Storyboards\RotateIn180Clockwise.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Transitions\Storyboards\RotateIn180CounterClockwise.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Transitions\Storyboards\RotateIn90Clockwise.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Transitions\Storyboards\RotateIn90CounterClockwise.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Transitions\Storyboards\RotateOut180Clockwise.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Transitions\Storyboards\RotateOut180CounterClockwise.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Transitions\Storyboards\RotateOut90Clockwise.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Transitions\Storyboards\RotateOut90CounterClockwise.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Transitions\Storyboards\SlideDownFadeIn.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Transitions\Storyboards\SlideDownFadeOut.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Transitions\Storyboards\SlideLeftFadeIn.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Transitions\Storyboards\SlideLeftFadeOut.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Transitions\Storyboards\SlideRightFadeIn.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Transitions\Storyboards\SlideRightFadeOut.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Transitions\Storyboards\SlideUpFadeIn.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Transitions\Storyboards\SlideUpFadeOut.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Transitions\Storyboards\SwivelBackwardIn.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Transitions\Storyboards\SwivelBackwardOut.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Transitions\Storyboards\SwivelForwardIn.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Transitions\Storyboards\SwivelForwardOut.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Transitions\Storyboards\SwivelFullScreenIn.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Transitions\Storyboards\SwivelFullScreenOut.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Transitions\Storyboards\TurnstileBackwardIn.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Transitions\Storyboards\TurnstileBackwardOut.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Transitions\Storyboards\TurnstileForwardIn.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Transitions\Storyboards\TurnstileForwardOut.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Microsoft.Phone.Controls\Microsoft.Phone.Controls.csproj">
+      <Project>{8FA024C6-8993-4135-8080-71557C11583E}</Project>
+      <Name>Microsoft.Phone.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Phone\Microsoft.Phone.csproj">
+      <Project>{747F13A4-744C-48F1-BC6F-F8290B9D64A8}</Project>
+      <Name>Microsoft.Phone</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Xna.Framework.Input.Touch\Microsoft.Xna.Framework.Input.Touch.csproj">
+      <Project>{38924BEC-AE58-4FEC-9F47-FF563B7AC051}</Project>
+      <Name>Microsoft.Xna.Framework.Input.Touch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Xna.Framework\Microsoft.Xna.Framework.csproj">
+      <Project>{C72604BD-D8CF-49D4-8944-876072A452A1}</Project>
+      <Name>Microsoft.Xna.Framework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx" />
+    <EmbeddedResource Include="Resources.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ContextMenu\TODO.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{A1591282-1198-4647-A2B1-27E5FF5F6F3B}">
+        <SilverlightProjectProperties />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

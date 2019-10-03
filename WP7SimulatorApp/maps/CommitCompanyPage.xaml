@@ -1,0 +1,32 @@
+﻿<phone:PhoneApplicationPage x:Class="WP7SimulatorApp.maps.CommitCompanyPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
+    mc:Ignorable="d"
+    d:DesignHeight="390" d:DesignWidth="228" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="12,12,0,0" Name="textBlock1" Text="商家名称" VerticalAlignment="Top" />
+        <TextBox Height="40" HorizontalAlignment="Left" Margin="12,33,0,0" Name="txtName" VerticalAlignment="Top" Width="204" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="20,73,0,0" Name="textBlock2" Text="类型" VerticalAlignment="Top" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="20,159,0,0" Name="textBlock3" Text="电话" VerticalAlignment="Top" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="20,217,0,0" Name="textBlock4" Text="说明" VerticalAlignment="Top" />
+        <TextBox Height="40" phone:TextBoxEx.InputScope="TelephoneNumber" HorizontalAlignment="Left" Margin="12,179,0,0" Name="txtTelPhone" VerticalAlignment="Top" Width="204" />
+        <TextBox Height="40" HorizontalAlignment="Left" Margin="12,237,0,0" Name="txtDesc" VerticalAlignment="Top" Width="204" />
+        <toolkit:ListPicker Margin="16,84,12,269" Name="listPickerType">
+         </toolkit:ListPicker>
+    </Grid>
+
+    <!--Sample code showing usage of ApplicationBar-->
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar.check.rest.png" Text="提交" x:Name="btnOK" Click="btnOK_Click" />
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar.close.rest.png" Text="取消" x:Name="btnCancel" Click="btnCancel_Click" />
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+</phone:PhoneApplicationPage>

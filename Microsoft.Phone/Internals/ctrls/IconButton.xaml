@@ -1,0 +1,14 @@
+﻿<UserControl x:Class="Microsoft.Phone.Internals.ctrls.IconButton"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="48" d:DesignWidth="48">
+    <Button Width="48" Height="48" BorderThickness="0,0,0,0" Padding="0,0,0,0" Margin="0,0,0,0" Click="Button_Click">
+        <Button.Background>
+            <ImageBrush ImageSource="/Microsoft.Phone;component/Internals/icons/appbar.basecircle.rest.png"></ImageBrush>
+        </Button.Background>
+        <Image Margin="-5,-5,0,0" Width="48" Height="48" x:Name="imgIcon" Source="{Binding Path=ImageSource}"></Image>
+    </Button>
+</UserControl>

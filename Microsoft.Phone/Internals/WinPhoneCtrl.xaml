@@ -1,0 +1,59 @@
+﻿<UserControl x:Class="Microsoft.Phone.Internals.WinPhoneCtrl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:phonectrl="clr-namespace:Microsoft.Phone.Controls"
+    mc:Ignorable="d"
+    xmlns:miria="clr-namespace:MIRIA.UIKit;assembly=MIRIA"
+    d:DesignHeight="551" d:DesignWidth="301" 
+    xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" Loaded="UserControl_Loaded">
+    <UserControl.Resources>
+        <Storyboard x:Name="storyboardVibrate">
+            <DoubleAnimation Duration="0:0:0.1" From="0" To="3" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="grid" d:IsOptimized="True"/>
+        </Storyboard>
+        <Style x:Key="PhoneApplicationFrameStyle1" TargetType="phonectrl:PhoneApplicationFrame">
+        	<Setter Property="IsTabStop" Value="False"/>
+        	<Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+        	<Setter Property="VerticalContentAlignment" Value="Stretch"/>
+        	<Setter Property="Background" Value="Transparent"/>
+        	<Setter Property="BorderBrush" Value="Transparent"/>
+        	<Setter Property="BorderThickness" Value="1"/>
+        	<Setter Property="Template">
+        		<Setter.Value>
+        			<ControlTemplate TargetType="phonectrl:PhoneApplicationFrame">
+        				<Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}">
+        					<Canvas x:Name="panelFrameRoot">
+								<ContentPresenter Cursor="{TemplateBinding Cursor}" Content="{TemplateBinding Content}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                            </Canvas>
+						</Border>
+        			</ControlTemplate>
+        		</Setter.Value>
+        	</Setter>
+        </Style>
+    </UserControl.Resources>
+
+    <Grid x:Name="LayoutRoot">        
+        <Grid x:Name="grid" Margin="0" Cursor="Hand">
+            <Grid.RenderTransform>
+                <CompositeTransform/>
+            </Grid.RenderTransform>
+            <Grid.Background>
+                <ImageBrush Stretch="UniformToFill" ImageSource="WM7_Skin_Up.png"/>
+            </Grid.Background>
+            <miria:TCanvas Margin="36,53,36,105" Name="canvasTouch">
+                <miria:TCanvas.Projection>
+                    <PlaneProjection x:Name="screenProjection"/>
+                </miria:TCanvas.Projection>
+                <phonectrl:PhoneApplicationFrame IsTabStop="True" x:Name="frameScreen" Height="390" Width="228" RenderTransformOrigin="0.5,0.5" Navigating="frameScreen_Navigating" GotFocus="frameScreen_GotFocus" Style="{StaticResource PhoneApplicationFrameStyle1}">
+                    <phonectrl:PhoneApplicationFrame.RenderTransform>
+                        <CompositeTransform x:Name="transformScreen"/>
+                    </phonectrl:PhoneApplicationFrame.RenderTransform>
+                </phonectrl:PhoneApplicationFrame>
+            </miria:TCanvas>            
+            <Button Height="49" HorizontalAlignment="Left" Margin="32,471,0,0" Name="btnBack" VerticalAlignment="Top" Width="65" Click="btnBack_Click" Opacity="0.195" />
+            <Button Height="49" Name="btnStart" Opacity="0.195" Width="65" Margin="116,473,120,29" Click="btnStart_Click" />
+            <Button Height="49" Name="btnSearch" Opacity="0.195" Width="65" Margin="205,473,31,29" Click="btnSearch_Click" />
+        </Grid>
+    </Grid>
+</UserControl>

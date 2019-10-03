@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Radios>  
+  <Radio frequency="91.5" url="mms://live.cri.cn/en4">EasyFM</Radio>
+  <Radio frequency="88.7" url="mms://live.hitfm.cn/fm887">HitFM</Radio>
+  <Radio frequency="90.2" url="mms://ting.mop.com/mopradio">MopRadio</Radio>
+  <Radio frequency="91.8" url="mms://vod.hcrt.cn/fm918">HangZhouJiaoTong</Radio>
+  <Radio frequency="101.9" url="mms://live.cri.cn/oldies">CRIOldMusic</Radio>
+  <Radio frequency="89" url="mms://vod.hcrt.cn/89">HangZhouXinWen</Radio>
+  <Radio frequency="102.3" url="mms://media4.abc.net.au/raflp/">ABCMusic</Radio>
+  <Radio frequency="99.3" url="mms://live.rgd.com.cn/993">GuangDongMusic</Radio>
+  <Radio frequency="97.4" url="mms://live.rgd.com.cn/974">ZhuJiangJingji</Radio>
+  <Radio frequency="92.4" url="mms://59.38.110.90/924">Foshan924</Radio>
+  <Radio frequency="98.5" url="mms://59.38.110.90/985">Foshan985</Radio>
+  <Radio frequency="105.2" url="mms://live.rgd.com.cn/1052">YangChengJiaoTong</Radio>
+  <Radio frequency="100.8" url="mms://radio.sun0769.com/fm1008">DongGuanXinWen</Radio>
+  <Radio frequency="107.5" url="mms://radio.sun0769.com/fm1075">DongGuanJiaoTong</Radio>
+  <Radio frequency="100.2" url="mms://116.254.197.80/fm1002">JiangMenXinWen</Radio>
+  <Radio frequency="93.3" url="mms://116.254.197.80/fm933">JiangMenLvYou</Radio>
+  <Radio frequency="91.2" url="emres://Microsoft.Phone.Devices.Radio.Internals.czbk.wma">net.itcast.cn</Radio>
+  <Radio frequency="103.3" url="emres://Microsoft.Phone.Devices.Radio.Internals.1.mp3">1</Radio>
+  <Radio frequency="104.2" url="emres://Microsoft.Phone.Devices.Radio.Internals.2.mp3">2</Radio>
+  <Radio frequency="105.1" url="emres://Microsoft.Phone.Devices.Radio.Internals.3.mp3">3</Radio>
+  <Radio frequency="105.5" url="emres://Microsoft.Phone.Devices.Radio.Internals.SuJing.wma">SuJingFM</Radio>
+  <Radio frequency="103.8" url="emres://Microsoft.Phone.Devices.Radio.Internals.YuZhouChenXi.mp3">FeiYuXiu</Radio>
+</Radios>

@@ -1,0 +1,18 @@
+﻿<phone:PhoneApplicationPage x:Class="WP7SimulatorApp.Test1.KeyboardTestPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    mc:Ignorable="d"
+    d:DesignHeight="390" d:DesignWidth="228">
+    
+    <Grid x:Name="LayoutRoot" GotFocus="LayoutRoot_GotFocus" TextInputStart="LayoutRoot_TextInputStart" TextInputUpdate="LayoutRoot_TextInputUpdate">
+        <TextBox phone:TextBoxEx.InputScope="Number" Height="49">            
+        </TextBox>
+        <TextBox phone:TextBoxEx.InputScope="Number"  Height="49" HorizontalAlignment="Left" Margin="24,27,0,0" Name="textBox1" VerticalAlignment="Top" Width="142" />
+        <TextBox phone:TextBoxEx.InputScope="TelephoneNumber" Height="49" HorizontalAlignment="Left" Margin="24,113,0,0" Name="textBox2" VerticalAlignment="Top" Width="142" LostFocus="textBox2_LostFocus" />
+        <CheckBox Content="CheckBox" Height="52" HorizontalAlignment="Left" Margin="28,231,0,0" Name="checkBox1" VerticalAlignment="Top" Width="126" />
+        <TextBox phone:TextBoxEx.InputScope="EmailNameOrAddress" Height="65" HorizontalAlignment="Left" Margin="62,291,0,0" Name="textBox3" VerticalAlignment="Top" Width="120" />
+    </Grid>
+</phone:PhoneApplicationPage>

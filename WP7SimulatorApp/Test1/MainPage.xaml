@@ -1,0 +1,25 @@
+﻿<phone:PhoneApplicationPage x:Class="WP7SimulatorApp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    mc:Ignorable="d"
+    Orientation="Portrait"                  
+    d:DesignHeight="390" d:DesignWidth="228" OrientationChanged="PhoneApplicationPage_OrientationChanged" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk">
+    
+    <Grid x:Name="LayoutRoot">
+        <Button Content="Camera" Height="36" Margin="100,200,0,0" Name="button1" Width="84" Click="button1_Click" />
+        <Thumb Height="27" HorizontalAlignment="Left" Margin="61,65,0,0" Name="thumb1" VerticalAlignment="Top" Width="33" DragDelta="thumb1_DragDelta" >
+            <Thumb.RenderTransform>
+                <TranslateTransform x:Name="tr"></TranslateTransform>
+            </Thumb.RenderTransform>
+        </Thumb>
+        <Line x:Name="lineG" X1="130" Y1="180" X2="130" Y2="180" Stroke="Red" StrokeEndLineCap="Square" StrokeThickness="5"/>
+        <InkPresenter Height="72" HorizontalAlignment="Left" Margin="35,172,0,0" Name="inkPresenter1" VerticalAlignment="Top" Width="96" MouseLeftButtonDown="inkPresenter1_MouseLeftButtonDown" MouseMove="inkPresenter1_MouseMove" Background="#FF141414" MouseLeftButtonUp="inkPresenter1_MouseLeftButtonUp" />
+        <Button Content="radio" Height="39" HorizontalAlignment="Left" Margin="96,100,0,0" Name="button2" VerticalAlignment="Top" Width="107" Click="button2_Click" />
+        <TextBox Height="38" HorizontalAlignment="Left" Margin="26,0,0,329" Name="textBox1" VerticalAlignment="Bottom" Width="87" />
+        <Image Height="93" HorizontalAlignment="Left" Margin="26,250,0,0" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="90" />
+        <TextBox Height="37" HorizontalAlignment="Left" Margin="27,137,0,0" Name="textBox2" VerticalAlignment="Top" Width="120" />
+    </Grid>
+</phone:PhoneApplicationPage>

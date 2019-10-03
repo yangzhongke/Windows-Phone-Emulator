@@ -1,0 +1,15 @@
+﻿<phone:PhoneApplicationPage x:Class="Microsoft.Phone.Internals.Pages.CameraCapturePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    mc:Ignorable="d"
+    d:DesignHeight="390" d:DesignWidth="228" xmlns:my="clr-namespace:Microsoft.Phone.Internals.ctrls">
+    
+    <Grid x:Name="LayoutRoot" AllowDrop="True" Unloaded="LayoutRoot_Unloaded" Loaded="LayoutRoot_Loaded" Drop="LayoutRoot_Drop">
+        <MediaElement x:Name="shutterSoundPlayer" Visibility="Collapsed" MediaEnded="shutterSoundPlayer_MediaEnded" />
+        <Rectangle Height="179" HorizontalAlignment="Left" Margin="18,26,0,0" Name="rectPreview" Stroke="Black" StrokeThickness="1" VerticalAlignment="Top" Width="186" />
+        <my:IconButton HorizontalAlignment="Left" Margin="77,220,0,0" x:Name="btnCapture" VerticalAlignment="Top" ImageSource="/Microsoft.Phone;component/Internals/icons/appbar.feature.camera.rest.png" Click="btnCapture_Click" />
+    </Grid>
+</phone:PhoneApplicationPage>

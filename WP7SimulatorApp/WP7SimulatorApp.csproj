@@ -1,0 +1,454 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ExpressionBlendVersion>4.0.20525.0</ExpressionBlendVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3A6AD164-C0E9-4340-AE33-21D756ED8F21}</ProjectGuid>
+    <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WP7SimulatorApp</RootNamespace>
+    <AssemblyName>WP7SimulatorApp</AssemblyName>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>WP7SimulatorApp.xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>WP7SimulatorApp.App</SilverlightAppEntry>
+    <TestPageFileName>TestPage.html</TestPageFileName>
+    <CreateTestPage>true</CreateTestPage>
+    <ValidateXaml>true</ValidateXaml>
+    <EnableOutOfBrowser>true</EnableOutOfBrowser>
+    <UsePlatformExtensions>false</UsePlatformExtensions>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <LinkedServerProject>
+    </LinkedServerProject>
+    <OutOfBrowserSettingsFile>Properties\OutOfBrowserSettings.xml</OutOfBrowserSettingsFile>
+    <Utf8Output>true</Utf8Output>
+  </PropertyGroup>
+  <!-- This property group is only here to support building this project using the
+		MSBuild 3.5 toolset. In order to work correctly with this older toolset, it needs 
+		to set the TargetFrameworkVersion to v3.5 -->
+  <PropertyGroup Condition="'$(MSBuildToolsVersion)' == '3.5'">
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Maps.MapControl, Version=1.0.1.0, Culture=neutral, PublicKeyToken=498d0d22d7936b73, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Maps.MapControl.Common, Version=1.0.1.0, Culture=neutral, PublicKeyToken=498d0d22d7936b73, processorArchitecture=MSIL" />
+    <Reference Include="mscorlib" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Windows.Controls" />
+    <Reference Include="System.Windows.Controls.Data.Input, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System.Windows.Controls.Navigation, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Controls.Toolkit" />
+    <Reference Include="System.Windows.Controls.Toolkit.Internals" />
+    <Reference Include="System.Windows.Input.Manipulations, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Windows.Browser" />
+    <Reference Include="System.Xml.Linq, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Demo2\PushNotifPage.xaml.cs">
+      <DependentUpon>PushNotifPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DemoPage1.xaml.cs">
+      <DependentUpon>DemoPage1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Demo\AccelerometerPage1.xaml.cs">
+      <DependentUpon>AccelerometerPage1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Demo\CameraTaskPage1.xaml.cs">
+      <DependentUpon>CameraTaskPage1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Demo\DateTimePickerPage1.xaml.cs">
+      <DependentUpon>DateTimePickerPage1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Demo\IsolatedStoragePage1.xaml.cs">
+      <DependentUpon>IsolatedStoragePage1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Demo\ManTestPage1.xaml.cs">
+      <DependentUpon>ManTestPage1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Demo\MLPicsPage1.xaml.cs">
+      <DependentUpon>MLPicsPage1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Demo\NumbersDataSource.cs" />
+    <Compile Include="Demo\ToggleSwitchPage1.xaml.cs">
+      <DependentUpon>ToggleSwitchPage1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Demo\PictureToImgSrcConverter.cs" />
+    <Compile Include="Demo\TasksPage1.xaml.cs">
+      <DependentUpon>TasksPage1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Demo\TombStonePage1.xaml.cs">
+      <DependentUpon>TombStonePage1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Demo\VibrateCtrlPage1.xaml.cs">
+      <DependentUpon>VibrateCtrlPage1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GPSTestPage.xaml.cs">
+      <DependentUpon>GPSTestPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="maps\API\APIHelper.cs" />
+    <Compile Include="maps\API\APIWebClient.cs" />
+    <Compile Include="maps\API\BaseAPI.cs" />
+    <Compile Include="maps\API\CommitCompanyAPI.cs" />
+    <Compile Include="maps\API\GetNearByCompaniesAPI.cs" />
+    <Compile Include="maps\API\Models\CompanyInfo.cs" />
+    <Compile Include="maps\API\SessionState.cs" />
+    <Compile Include="maps\API\UploadCompanyPhotoAPI.cs" />
+    <Compile Include="maps\API\UserLoginAPI.cs" />
+    <Compile Include="maps\API\UserRegAPI.cs" />
+    <Compile Include="maps\CommitCompanyPage.xaml.cs">
+      <DependentUpon>CommitCompanyPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="maps\CompanyDetailPage.xaml.cs">
+      <DependentUpon>CompanyDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="maps\CompanyHelper.cs" />
+    <Compile Include="maps\MapMainPage.xaml.cs">
+      <DependentUpon>MapMainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="maps\ChineseMode.cs" />
+    <Compile Include="maps\ChineseTileSource.cs" />
+    <Compile Include="maps\ctrls\ProgressingCtrl.xaml.cs">
+      <DependentUpon>ProgressingCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="maps\Helpers.cs" />
+    <Compile Include="maps\LoginPage.xaml.cs">
+      <DependentUpon>LoginPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="maps\RegUserPage.xaml.cs">
+      <DependentUpon>RegUserPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="maps\SessionManager.cs" />
+    <Compile Include="maps\UploadCompanyPhotoPage.xaml.cs">
+      <DependentUpon>UploadCompanyPhotoPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PhonePageTemplate.xaml.cs">
+      <DependentUpon>PhonePageTemplate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuanJingPage1.xaml.cs">
+      <DependentUpon>QuanJingPage1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RadioTestPage.xaml.cs">
+      <DependentUpon>RadioTestPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Test1\MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Test1\AppBarTestPage1.xaml.cs">
+      <DependentUpon>AppBarTestPage1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Test1\ComObjTestPage.xaml.cs">
+      <DependentUpon>ComObjTestPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Test1\ExtPropPage.xaml.cs">
+      <DependentUpon>ExtPropPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Test1\KeyboardTestPage.xaml.cs">
+      <DependentUpon>KeyboardTestPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Test1\MLTestPage.xaml.cs">
+      <DependentUpon>MLTestPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Test1\NetWorkStopwatchPage1.xaml.cs">
+      <DependentUpon>NetWorkStopwatchPage1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Test1\PivotTestPage1.xaml.cs">
+      <DependentUpon>PivotTestPage1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Test1\RecorderPage.xaml.cs">
+      <DependentUpon>RecorderPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Test1\TaskTest1Page.xaml.cs">
+      <DependentUpon>TaskTest1Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Test1\TestPage1.xaml.cs">
+      <DependentUpon>TestPage1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Test2\ToolkitTest1.xaml.cs">
+      <DependentUpon>ToolkitTest1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Test2\PopupPage1.xaml.cs">
+      <DependentUpon>PopupPage1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Test2\TouchPanelPage1.xaml.cs">
+      <DependentUpon>TouchPanelPage1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PhotoChooserTaskTestPage1.xaml.cs">
+      <DependentUpon>PhotoChooserTaskTestPage1.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+    <Page Include="Demo2\PushNotifPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DemoPage1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Demo\AccelerometerPage1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Demo\CameraTaskPage1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Demo\DateTimePickerPage1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Demo\IsolatedStoragePage1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Demo\ManTestPage1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Demo\MLPicsPage1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Demo\ToggleSwitchPage1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Demo\TasksPage1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Demo\TombStonePage1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Demo\VibrateCtrlPage1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GPSTestPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="maps\CommitCompanyPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="maps\CompanyDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="maps\MapMainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="maps\ctrls\ProgressingCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="maps\LoginPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="maps\RegUserPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="maps\UploadCompanyPhotoPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PhonePageTemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="QuanJingPage1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RadioTestPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Test1\MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Test1\AppBarTestPage1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Test1\ComObjTestPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Test1\ExtPropPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Test1\KeyboardTestPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Test1\MLTestPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Test1\NetWorkStopwatchPage1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Test1\PivotTestPage1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Test1\RecorderPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Test1\TaskTest1Page.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Test1\TestPage1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Test2\ToolkitTest1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Test2\PopupPage1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Test2\TouchPanelPage1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PhotoChooserTaskTestPage1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\AppManifest.xml" />
+    <EmbeddedResource Include="Properties\WMappManifest.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\OutOfBrowserSettings.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Microsoft.Devices.Sensors\Microsoft.Devices.Sensors.csproj">
+      <Project>{641E9F8D-2855-4228-9DF0-EEC7C1E1CF83}</Project>
+      <Name>Microsoft.Devices.Sensors</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Phone.Controls.Maps\Microsoft.Phone.Controls.Maps.csproj">
+      <Project>{EF85750D-8B9E-4991-8588-D08FDA201D51}</Project>
+      <Name>Microsoft.Phone.Controls.Maps</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Phone.Controls.Toolkit\Microsoft.Phone.Controls.Toolkit.csproj">
+      <Project>{7B815200-67BD-4F01-8E32-B1324E5ED154}</Project>
+      <Name>Microsoft.Phone.Controls.Toolkit</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Phone.Controls\Microsoft.Phone.Controls.csproj">
+      <Project>{8FA024C6-8993-4135-8080-71557C11583E}</Project>
+      <Name>Microsoft.Phone.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Phone\Microsoft.Phone.csproj">
+      <Project>{747F13A4-744C-48F1-BC6F-F8290B9D64A8}</Project>
+      <Name>Microsoft.Phone</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Xna.Framework.Input.Touch\Microsoft.Xna.Framework.Input.Touch.csproj">
+      <Project>{38924BEC-AE58-4FEC-9F47-FF563B7AC051}</Project>
+      <Name>Microsoft.Xna.Framework.Input.Touch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Xna.Framework\Microsoft.Xna.Framework.csproj">
+      <Project>{C72604BD-D8CF-49D4-8944-876072A452A1}</Project>
+      <Name>Microsoft.Xna.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Device\System.Device.csproj">
+      <Project>{7E91DB87-246D-4663-9DEC-C4C242E9CC5C}</Project>
+      <Name>System.Device</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ApplicationIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\appbar.add.rest.png" />
+    <Content Include="Images\appbar.back.rest.png" />
+    <Content Include="Background.png" />
+    <Content Include="Images\appbar.check.rest.png" />
+    <Content Include="Images\appbar.close.rest.png" />
+    <Content Include="Images\appbar.stop.rest.png" />
+    <Content Include="maps\tel.png" />
+    <Content Include="SplashScreenImage.jpg" />
+    <Content Include="Toolkit.Content\ApplicationBar.Cancel.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Check.png" />
+    <Content Include="发布与使用.txt" />
+    <Resource Include="PanoramaBackground.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{A1591282-1198-4647-A2B1-27E5FF5F6F3B}">
+        <SilverlightProjectProperties />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	     Other similar extension points exist, see Microsoft.Common.targets.
+	<Target Name="BeforeBuild">
+	</Target>
+	<Target Name="AfterBuild">
+	</Target>
+	-->
+</Project>

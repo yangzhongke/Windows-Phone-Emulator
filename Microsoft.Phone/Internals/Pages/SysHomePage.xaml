@@ -1,0 +1,265 @@
+﻿<phone:PhoneApplicationPage x:Class="Microsoft.Phone.Internals.Pages.SysHomePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit"
+    mc:Ignorable="d" d:DesignWidth="228"
+    d:DesignHeight="390" >
+    <phone:PhoneApplicationPage.Resources>
+        <SolidColorBrush x:Key="resPhoneAccentColor" Color="#FF1BA1E2"/>
+        <SolidColorBrush x:Key="resPhoneGrayColor" Color="#FF292929"/>
+        <Style x:Key="resApplicationTile" TargetType="Button">
+            <Setter Property="Background" Value="#FF1F3B53"/>
+            <Setter Property="Foreground" Value="#FF000000"/>
+            <Setter Property="Padding" Value="3"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="BorderBrush">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFA3AEB9" Offset="0"/>
+                        <GradientStop Color="#FF8399A9" Offset="0.375"/>
+                        <GradientStop Color="#FF718597" Offset="0.375"/>
+                        <GradientStop Color="#FF617584" Offset="1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal"/>
+                                    <VisualState x:Name="MouseOver"/>
+                                    <VisualState x:Name="Pressed"/>
+                                    <VisualState x:Name="Disabled"/>
+                                </VisualStateGroup>
+                                <VisualStateGroup x:Name="FocusStates">
+                                    <VisualState x:Name="Focused"/>
+                                    <VisualState x:Name="Unfocused"/>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Rectangle x:Name="rectTileBackground" Fill="{StaticResource resPhoneAccentColor}" Margin="0" StrokeThickness="0"/>
+                            <Image x:Name="imgApplicationIcon" Width="114" Source="{Binding TemplateType5BackgroundImageURI}" Height="114" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                            <TextBlock x:Name="lblApplicationName" Foreground="White" Text="{Binding TemplateType5Title}" VerticalAlignment="Bottom" Margin="8,0,0,3" FontSize="12" Visibility="Collapsed" />
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="resShowApplicationsList" TargetType="Button">
+            <Setter Property="Background" Value="#FF1F3B53"/>
+            <Setter Property="Foreground" Value="#FF000000"/>
+            <Setter Property="Padding" Value="3"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="BorderBrush">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFA3AEB9" Offset="0"/>
+                        <GradientStop Color="#FF8399A9" Offset="0.375"/>
+                        <GradientStop Color="#FF718597" Offset="0.375"/>
+                        <GradientStop Color="#FF617584" Offset="1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal"/>
+                                    <VisualState x:Name="MouseOver"/>
+                                    <VisualState x:Name="Pressed"/>
+                                    <VisualState x:Name="Disabled"/>
+                                </VisualStateGroup>
+                                <VisualStateGroup x:Name="FocusStates">
+                                    <VisualState x:Name="Focused"/>
+                                    <VisualState x:Name="Unfocused"/>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Image x:Name="imgDisplayApplicationList" HorizontalAlignment="Left" Height="32" Source="/Microsoft.Phone;component/Internals/icons/32x32_Open_List.png" Stretch="Fill" VerticalAlignment="Bottom" Width="32" Margin="0"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <SolidColorBrush x:Key="resPhoneForegroundColor" Color="White"/>
+        <Style x:Key="resApplicationIcon" TargetType="Button">
+            <Setter Property="Background" Value="#FF1F3B53"/>
+            <Setter Property="Foreground" Value="#FF000000"/>
+            <Setter Property="Padding" Value="3"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="BorderBrush">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFA3AEB9" Offset="0"/>
+                        <GradientStop Color="#FF8399A9" Offset="0.375"/>
+                        <GradientStop Color="#FF718597" Offset="0.375"/>
+                        <GradientStop Color="#FF617584" Offset="1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal"/>
+                                    <VisualState x:Name="MouseOver"/>
+                                    <VisualState x:Name="Pressed"/>
+                                    <VisualState x:Name="Disabled"/>
+                                </VisualStateGroup>
+                                <VisualStateGroup x:Name="FocusStates">
+                                    <VisualState x:Name="Focused"/>
+                                    <VisualState x:Name="Unfocused"/>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <StackPanel Orientation="Horizontal">
+                                <Grid x:Name="ApplicationIcon" Height="41" Width="41">
+                                    <Rectangle x:Name="rectApplicationIconBackground" Fill="{StaticResource resPhoneGrayColor}" Width="41" Height="41" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0" StrokeThickness="0"/>
+                                    <Image x:Name="imgApplicationIcon" Width="41" Source="{Binding IconUrl}" Height="41" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                                </Grid>
+                                <TextBlock x:Name="lblApplicationTitle" HorizontalAlignment="Left" VerticalAlignment="Center" Text="{TemplateBinding Content}" Foreground="{StaticResource resPhoneForegroundColor}" d:LayoutOverrides="HorizontalAlignment" FontSize="21.333" FontFamily="/PointAbout.Mashup.Emulator;component/Fonts/Fonts.zip#Segoe WP Light" Margin="8,0,0,0"/>
+                            </StackPanel>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Storyboard x:Name="resShowApplicationListStoryboard">
+            <DoubleAnimation Duration="0:0:1" To="-256" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="btnShowApplicationsList" d:IsOptimized="True">
+                <DoubleAnimation.EasingFunction>
+                    <QuinticEase EasingMode="EaseOut"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Duration="0:0:1" To="-300" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="wpStartTiles" d:IsOptimized="True">
+                <DoubleAnimation.EasingFunction>
+                    <QuinticEase EasingMode="EaseOut"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Duration="0:0:1" To="-180" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)" Storyboard.TargetName="btnShowApplicationsList" d:IsOptimized="True">
+                <DoubleAnimation.EasingFunction>
+                    <QuinticEase EasingMode="EaseOut"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Duration="0:0:1" To="0" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="spApplicationList" d:IsOptimized="True">
+                <DoubleAnimation.EasingFunction>
+                    <QuinticEase EasingMode="EaseOut"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+        </Storyboard>
+        <SolidColorBrush x:Key="resPhoneBackgroundColor" Color="Black"/>
+        <Storyboard x:Name="resShowTileListStoryboard">
+            <DoubleAnimation Duration="0:0:1" To="0" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="btnShowApplicationsList" d:IsOptimized="True">
+                <DoubleAnimation.EasingFunction>
+                    <QuinticEase EasingMode="EaseOut"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Duration="0:0:1" To="0" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="wpStartTiles" d:IsOptimized="True">
+                <DoubleAnimation.EasingFunction>
+                    <QuinticEase EasingMode="EaseOut"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Duration="0:0:1" To="0" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)" Storyboard.TargetName="btnShowApplicationsList" d:IsOptimized="True">
+                <DoubleAnimation.EasingFunction>
+                    <QuinticEase EasingMode="EaseOut"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Duration="0:0:1" To="300" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="spApplicationList" d:IsOptimized="True">
+                <DoubleAnimation.EasingFunction>
+                    <QuinticEase EasingMode="EaseOut"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+        </Storyboard>
+
+        <Style x:Key="resHardwareButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="#FF1F3B53"/>
+            <Setter Property="Foreground" Value="#FF000000"/>
+            <Setter Property="Padding" Value="3"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="BorderBrush">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFA3AEB9" Offset="0"/>
+                        <GradientStop Color="#FF8399A9" Offset="0.375"/>
+                        <GradientStop Color="#FF718597" Offset="0.375"/>
+                        <GradientStop Color="#FF617584" Offset="1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal"/>
+                                    <VisualState x:Name="MouseOver"/>
+                                    <VisualState x:Name="Pressed">
+                                        <Storyboard>
+                                            <ColorAnimation Duration="0" To="Transparent" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" Storyboard.TargetName="Background"/>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Disabled"/>
+                                </VisualStateGroup>
+                                <VisualStateGroup x:Name="FocusStates">
+                                    <VisualState x:Name="Focused"/>
+                                    <VisualState x:Name="Unfocused"/>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Border x:Name="Background" Background="Transparent">
+                                <Grid>
+                                    <Rectangle x:Name="BackgroundGradient" StrokeThickness="0" Opacity="0"/>
+                                </Grid>
+                            </Border>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </phone:PhoneApplicationPage.Resources>
+    <phone:PhoneApplicationPage.RenderTransform>
+        <ScaleTransform CenterX="0" CenterY="0" ScaleX="0.7" ScaleY="0.7"></ScaleTransform>
+    </phone:PhoneApplicationPage.RenderTransform>
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid x:Name="ScreenLayout" HorizontalAlignment="Left" Height="528" VerticalAlignment="Top" Width="316" Margin="20,20,0,0" Grid.RowSpan="2">
+            <Button x:Name="btnShowApplicationsList" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource resShowApplicationsList}" Margin="271,60,0,0" RenderTransformOrigin="0.5,0.5" Click="btnShowApplicationsList_Click">
+                <Button.RenderTransform>
+                    <CompositeTransform/> 
+                </Button.RenderTransform>
+            </Button>
+            <toolkit:WrapPanel x:Name="wpStartTiles" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="18,61,0,0" RenderTransformOrigin="0.5,0.5">
+                <toolkit:WrapPanel.RenderTransform>
+                    <CompositeTransform/>
+                </toolkit:WrapPanel.RenderTransform>
+                <Button x:Name="btnApplicationTile" DataContext="{Binding}" Click="btnLaunch_Click" Margin="0,0,8,8" Style="{StaticResource resApplicationTile}" Height="114" Width="114"/>
+                <Image x:Name="imgSampleTile_IE" Height="114" Margin="0,0,8,8" Source="/Microsoft.Phone;component/Internals/icons/114x114_Tile_IE.png" Stretch="Fill" Width="114" MouseLeftButtonDown="imgSampleTile_IE_MouseLeftButtonDown" />
+                <Image x:Name="imgSampleTile_Phone" Height="114" Margin="0,0,8,8" Source="/Microsoft.Phone;component/Internals/icons/114x114_Tile_Phone.png" Stretch="Fill" Width="114" MouseLeftButtonDown="imgSampleTile_Phone_MouseLeftButtonDown" />
+                <Image x:Name="imgSampleTile_Settings" Height="114" Margin="0,0,8,8" Source="/Microsoft.Phone;component/Internals/icons/114x114_Tile_Settings.png" Stretch="Fill" Width="114" MouseLeftButtonDown="imgSampleTile_Settings_MouseLeftButtonDown" />
+            </toolkit:WrapPanel>
+            <StackPanel x:Name="spApplicationList" Margin="64,61,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
+                <StackPanel.RenderTransform>
+                    <CompositeTransform TranslateX="300"/>
+                </StackPanel.RenderTransform>
+                <Button x:Name="btnApplicationIcon" Content="{Binding DisplayName}" Style="{StaticResource resApplicationIcon}" HorizontalAlignment="Left" Click="btnLaunch_Click" Margin="0,0,0,8"/>
+                <StackPanel x:Name="spSampleIcon_IE" Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,0,0,8" MouseLeftButtonDown="imgSampleTile_IE_MouseLeftButtonDown">
+                    <Image x:Name="imgSampleIcon_IE" Width="41" Height="41" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/Microsoft.Phone;component/Internals/icons/41x41_icon_ie.png" />
+                    <TextBlock x:Name="lblSampleIcon_IE" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="{StaticResource resPhoneForegroundColor}" d:LayoutOverrides="HorizontalAlignment" FontSize="21.333" FontFamily="/PointAbout.Mashup.Emulator;component/Fonts/Fonts.zip#Segoe WP Light" Margin="8,0,0,0" Text="Internet Explorer"/>
+                </StackPanel>
+                <StackPanel x:Name="spSampleIcon_Phone" Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,0,0,8" MouseLeftButtonDown="imgSampleTile_Phone_MouseLeftButtonDown">
+                    <Image x:Name="imgSampleIcon_Phone" Width="41" Height="41" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/Microsoft.Phone;component/Internals/icons/41x41_Icon_Phone.png" />
+                    <TextBlock x:Name="lblSampleIcon_Phone" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="{StaticResource resPhoneForegroundColor}" d:LayoutOverrides="HorizontalAlignment" FontSize="21.333" FontFamily="/PointAbout.Mashup.Emulator;component/Fonts/Fonts.zip#Segoe WP Light" Margin="8,0,0,0" Text="Phone"/>
+                </StackPanel>
+                <StackPanel x:Name="spSampleIcon_Settings" Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,0,0,8" MouseLeftButtonDown="imgSampleTile_Settings_MouseLeftButtonDown">
+                    <Image x:Name="imgSampleIcon_Settings" Width="41" Height="41" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/Microsoft.Phone;component/Internals/icons/41x41_Icon_Settings.png" />
+                    <TextBlock x:Name="lblSampleIcon_Settings" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="{StaticResource resPhoneForegroundColor}" d:LayoutOverrides="HorizontalAlignment" FontSize="21.333" FontFamily="/PointAbout.Mashup.Emulator;component/Fonts/Fonts.zip#Segoe WP Light" Margin="8,0,0,0" Text="Settings"/>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+
+    </Grid>
+</phone:PhoneApplicationPage>

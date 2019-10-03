@@ -1,0 +1,10 @@
+<OutOfBrowserSettings ShortName="传智播客.Net培训WP7模拟器" EnableGPUAcceleration="False" ShowInstallMenuItem="True">
+  <OutOfBrowserSettings.Blurb>http://net.itcast.cn传智播客.Net培训，学费只要5800元</OutOfBrowserSettings.Blurb>
+  <OutOfBrowserSettings.WindowSettings>
+    <WindowSettings Title="传智播客.Net培训WP7模拟器" Height="768" Width="1024" />
+  </OutOfBrowserSettings.WindowSettings>
+  <OutOfBrowserSettings.SecuritySettings>
+    <SecuritySettings ElevatedPermissions="Required" />
+  </OutOfBrowserSettings.SecuritySettings>
+  <OutOfBrowserSettings.Icons />
+</OutOfBrowserSettings>

@@ -1,0 +1,382 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{747F13A4-744C-48F1-BC6F-F8290B9D64A8}</ProjectGuid>
+    <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Microsoft.Phone</RootNamespace>
+    <AssemblyName>Microsoft.Phone</AssemblyName>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>false</SilverlightApplication>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <Utf8Output>true</Utf8Output>
+    <ExpressionBlendVersion>4.0.20525.0</ExpressionBlendVersion>
+  </PropertyGroup>
+  <!-- This property group is only here to support building this project using the 
+       MSBuild 3.5 toolset. In order to work correctly with this older toolset, it needs 
+       to set the TargetFrameworkVersion to v3.5 -->
+  <PropertyGroup Condition="'$(MSBuildToolsVersion)' == '3.5'">
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\WP7SimulatorAppTemplate\lib\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FJ.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.CSharp, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="MIGlibLight, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="MIRIA, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="mscorlib" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Controls, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System.Windows.Controls.Data.Input, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System.Windows.Controls.Navigation, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Controls.Toolkit, Version=4.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System.Windows.Controls.Toolkit.Internals, Version=4.0.5.0, Culture=neutral, PublicKeyToken=2c5c654d367bf4a7" />
+    <Reference Include="System.Windows.Input.Manipulations, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Windows.Browser" />
+    <Reference Include="System.Xml.Linq, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Serialization, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\PhoneApplicationFrame.cs" />
+    <Compile Include="Controls\TextBoxEx.cs" />
+    <Compile Include="Internals\ctrls\BaseKeyboard.cs" />
+    <Compile Include="Internals\ctrls\KeyboardContainer.xaml.cs">
+      <DependentUpon>KeyboardContainer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Internals\ctrls\NormalKeyboard.xaml.cs">
+      <DependentUpon>NormalKeyboard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Internals\ctrls\NumberKeyboard.xaml.cs">
+      <DependentUpon>NumberKeyboard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Internals\ctrls\TelNumKeyboard.xaml.cs">
+      <DependentUpon>TelNumKeyboard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Internals\Manipulation\ManipulationWrapper.cs" />
+    <Compile Include="Internals\Pages\AboutPage.xaml.cs">
+      <DependentUpon>AboutPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Internals\Pages\EmailComposePage.xaml.cs">
+      <DependentUpon>EmailComposePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Internals\Pages\PhoneCallPage.xaml.cs">
+      <DependentUpon>PhoneCallPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Internals\Pages\PhoneNumberChooserPage.xaml.cs">
+      <DependentUpon>PhoneNumberChooserPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Internals\Pages\SavePhoneNumberPage.xaml.cs">
+      <DependentUpon>SavePhoneNumberPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Internals\Pages\SettingsPage.xaml.cs">
+      <DependentUpon>SettingsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Internals\Pages\WebBrowserPage.xaml.cs">
+      <DependentUpon>WebBrowserPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Internals\people\PeopleItemInfo.cs" />
+    <Compile Include="Internals\people\PeopleMgr.cs" />
+    <Compile Include="Internals\PopupHellper.cs" />
+    <Compile Include="Internals\touch\Gesture.cs" />
+    <Compile Include="Internals\touch\TouchArgs.cs" />
+    <Compile Include="LocalizeString.cs" />
+    <Compile Include="Notification\ChannelErrorType.cs" />
+    <Compile Include="Notification\ChannelPowerLevel.cs" />
+    <Compile Include="Notification\HttpNotification.cs" />
+    <Compile Include="Notification\HttpNotificationChannel.cs" />
+    <Compile Include="Notification\HttpNotificationEventArgs.cs" />
+    <Compile Include="Notification\Logging.cs" />
+    <Compile Include="Notification\NotificationChannelErrorEventArgs.cs" />
+    <Compile Include="Notification\NotificationChannelUriEventArgs.cs" />
+    <Compile Include="Notification\NotificationEventArgs.cs" />
+    <Compile Include="Notification\SafeNativeMethods.cs" />
+    <Compile Include="Notification\ShellObjectChannelInternals.cs" />
+    <Compile Include="PictureDecoder.cs" />
+    <Compile Include="Shell\Internals\BoolVisibilityConverter.cs" />
+    <Compile Include="Shell\Internals\PhoneAppBarCtrl.xaml.cs">
+      <DependentUpon>PhoneAppBarCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\OrientationChangedEventArgs.cs" />
+    <Compile Include="Controls\PageOrientation.cs" />
+    <Compile Include="Controls\PhoneApplicationPage.cs" />
+    <Compile Include="Controls\SupportedPageOrientation.cs" />
+    <Compile Include="Devices\Radio\FMRadio.cs" />
+    <Compile Include="Devices\Radio\RadioPowerMode.cs" />
+    <Compile Include="Devices\Radio\RadioRegion.cs" />
+    <Compile Include="Devices\VibrateController.cs" />
+    <Compile Include="Info\DeviceExtendedProperties.cs" />
+    <Compile Include="Info\UserExtendedProperties.cs" />
+    <Compile Include="Internals\AppHelper.cs" />
+    <Compile Include="Internals\ctrls\IconButton.xaml.cs">
+      <DependentUpon>IconButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Internals\Pages\CallInPage.xaml.cs">
+      <DependentUpon>CallInPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Internals\Pages\CameraCapturePage.xaml.cs">
+      <DependentUpon>CameraCapturePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Internals\Pages\ClipPhotoPage.xaml.cs">
+      <DependentUpon>ClipPhotoPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Internals\Pages\PhotoChooserPage.xaml.cs">
+      <DependentUpon>PhotoChooserPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Internals\Pages\SearchPage.xaml.cs">
+      <DependentUpon>SearchPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Internals\Pages\SMSComposePage.xaml.cs">
+      <DependentUpon>SMSComposePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Internals\Pages\SysHomePage.xaml.cs">
+      <DependentUpon>SysHomePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Internals\RepeatedMediaElement.cs" />
+    <Compile Include="Internals\WinPhoneBoard.xaml.cs">
+      <DependentUpon>WinPhoneBoard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Internals\WinPhoneCtrl.xaml.cs">
+      <DependentUpon>WinPhoneCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Internals\WMAppConfiguration.cs" />
+    <Compile Include="Net\NetworkInformation\NetworkInterface.cs" />
+    <Compile Include="Net\NetworkInformation\NetworkInterfaceType.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Shell\ApplicationBar.cs" />
+    <Compile Include="Shell\ApplicationBarIconButton.cs" />
+    <Compile Include="Shell\ApplicationBarItemList.cs" />
+    <Compile Include="Shell\ApplicationBarMenuItem.cs" />
+    <Compile Include="Shell\ApplicationBarStateChangedEventArgs.cs" />
+    <Compile Include="Shell\IApplicationBar.cs" />
+    <Compile Include="Shell\IApplicationBarIconButton.cs" />
+    <Compile Include="Shell\IApplicationBarMenuItem.cs" />
+    <Compile Include="Shell\PhoneApplicationService.cs" />
+    <Compile Include="Shell\SystemTray.cs" />
+    <Compile Include="StreamHelper.cs" />
+    <Compile Include="System\Diagnostics\Stopwatch.cs" />
+    <Compile Include="System\Media\Imaging\Extensions.cs" />
+    <Compile Include="Tasks\ChooserBase.cs" />
+    <Compile Include="Tasks\ChooserInfo.cs" />
+    <Compile Include="Tasks\EmailComposeTask.cs" />
+    <Compile Include="Tasks\PhoneCallTask.cs" />
+    <Compile Include="Tasks\PhoneNumberChooserTask.cs" />
+    <Compile Include="Tasks\PhoneNumberResult.cs" />
+    <Compile Include="Tasks\PhotoChooserTask.cs" />
+    <Compile Include="Tasks\PhotoResult.cs" />
+    <Compile Include="Tasks\SavePhoneNumberTask.cs" />
+    <Compile Include="Tasks\TaskEventArgs.cs" />
+    <Compile Include="Tasks\SmsComposeTask.cs" />
+    <Compile Include="Tasks\CameraCaptureTask.cs" />
+    <Compile Include="Tasks\TaskResult.cs" />
+    <Compile Include="Tasks\WebBrowserTask.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\System.Device\System.Device.csproj">
+      <Project>{7E91DB87-246D-4663-9DEC-C4C242E9CC5C}</Project>
+      <Name>System.Device</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Internals\ctrls\KeyboardContainer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Internals\ctrls\KeyBoardRes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Internals\ctrls\NormalKeyboard.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Internals\ctrls\NumberKeyboard.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Internals\ctrls\TelNumKeyboard.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Internals\Pages\AboutPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Internals\Pages\EmailComposePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Internals\Pages\PhoneCallPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Internals\Pages\PhoneNumberChooserPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Internals\Pages\SavePhoneNumberPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Internals\Pages\SettingsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Internals\Pages\WebBrowserPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Shell\Internals\PhoneAppBarCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Internals\ctrls\IconButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Internals\Pages\CallInPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Internals\Pages\CameraCapturePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Internals\Pages\ClipPhotoPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Internals\Pages\PhotoChooserPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Internals\Pages\SearchPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Internals\Pages\SMSComposePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Internals\Pages\SysHomePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Internals\WinPhoneBoard.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Internals\WinPhoneCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ThemeResources.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="System.Windows.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Resource Include="Internals\WM7_Skin_Up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Internals\audios\phonecalling.wma" />
+    <Content Include="library\System.Windows.Input.Manipulations.dll" />
+    <Content Include="Notification\TODO.txt" />
+    <Resource Include="Internals\icons\114x114_tile_ie.png" />
+    <Resource Include="Internals\icons\114x114_tile_phone.png" />
+    <Resource Include="Internals\icons\114x114_tile_settings.png" />
+    <Resource Include="Internals\icons\32x32_open_list.png" />
+    <Resource Include="Internals\icons\41x41_icon_ie.png" />
+    <Resource Include="Internals\icons\41x41_icon_phone.png" />
+    <Resource Include="Internals\icons\41x41_icon_settings.png" />
+    <Resource Include="Internals\icons\appbar.add.rest.png" />
+    <Resource Include="Internals\icons\appbar.back.rest.png" />
+    <Resource Include="Internals\icons\appbar.next.rest.png" />
+    <Resource Include="Internals\icons\appbar.share.rest.png" />
+    <Resource Include="Images\114x114_tile_ie.png" />
+    <Resource Include="Images\114x114_tile_phone.png" />
+    <Resource Include="Images\114x114_tile_settings.png" />
+    <Resource Include="Images\32x32_open_list.png" />
+    <Resource Include="Images\41x41_icon_ie.png" />
+    <Resource Include="Images\41x41_icon_phone.png" />
+    <Resource Include="Images\41x41_icon_settings.png" />
+    <Resource Include="Images\appbar.add.rest.png" />
+    <Resource Include="Images\appbar.back.rest.png" />
+    <Resource Include="Images\appbar.basecircle.rest.png" />
+    <Resource Include="Images\appbar.check.rest.png" />
+    <Resource Include="Images\appbar.close.rest.png" />
+    <Resource Include="Images\appbar.feature.camera.rest.png" />
+    <Resource Include="Images\appbar.next.rest.png" />
+    <Resource Include="Images\appbar.share.rest.png" />
+    <Content Include="library\MIGlibLight.dll" />
+    <Content Include="library\MIRIA.dll" />
+    <EmbeddedResource Include="Internals\audios\vibrate.wma" />
+    <EmbeddedResource Include="Devices\Radio\Internals\RadioList.xml" />
+    <EmbeddedResource Include="Devices\Radio\Internals\RadioStatic.mp3" />
+    <Resource Include="Internals\icons\appbar.feature.camera.rest.png" />
+    <EmbeddedResource Include="Devices\Radio\Internals\YuZhouChenXi.mp3" />
+    <EmbeddedResource Include="Devices\Radio\Internals\SuJing.wma" />
+    <EmbeddedResource Include="Devices\Radio\Internals\2.mp3" />
+    <EmbeddedResource Include="Devices\Radio\Internals\3.mp3" />
+    <EmbeddedResource Include="Devices\Radio\Internals\1.mp3" />
+    <EmbeddedResource Include="Internals\audios\shutter.wma" />
+    <Resource Include="Internals\icons\appbar.basecircle.rest.png" />
+    <Resource Include="Internals\icons\appbar.check.rest.png" />
+    <EmbeddedResource Include="Internals\audios\nokiacallin.wma" />
+    <EmbeddedResource Include="Devices\Radio\Internals\czbk.wma" />
+    <Resource Include="Internals\icons\appbar.close.rest.png" />
+    <Resource Include="Internals\ctrls\key_back.png" />
+    <Resource Include="Internals\ctrls\key_return.png" />
+    <Content Include="library\FJ.Core.dll" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{A1591282-1198-4647-A2B1-27E5FF5F6F3B}">
+        <SilverlightProjectProperties />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

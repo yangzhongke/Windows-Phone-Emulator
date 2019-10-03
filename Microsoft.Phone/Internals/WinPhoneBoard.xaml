@@ -1,0 +1,27 @@
+﻿<UserControl
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit" 
+    xmlns:my="clr-namespace:Microsoft.Phone.Internals"
+    x:Class="Microsoft.Phone.Internals.WinPhoneBoard"
+    mc:Ignorable="d"
+    d:DesignHeight="600" d:DesignWidth="1000" Loaded="UserControl_Loaded" KeyDown="UserControl_KeyDown" xmlns:my1="clr-namespace:System.Device.Location.Internals;assembly=System.Device">
+	<Canvas x:Name="LayoutRoot" Background="Gray" Margin="0,0,0,0" >
+		<Grid Canvas.Left="163" Canvas.Top="4">
+            <Grid.Projection>
+                <PlaneProjection x:Name="phoneProjection" RotationX="0" RotationY="0" RotationZ="0"/>
+            </Grid.Projection>
+            <my:WinPhoneCtrl x:Name="winPhoneCtrl1" Height="551" Width="301" Canvas.Top="25" d:LayoutOverrides="Height">
+            </my:WinPhoneCtrl>
+		</Grid>
+        <Canvas Visibility="Collapsed" x:Name="canvasCtrlPanel">
+            <TextBlock Canvas.Left="476" Canvas.Top="25" Height="24" Name="textBlock1" Text="TelNum" Width="34" />
+            <TextBox Canvas.Left="516" Canvas.Top="12" Height="46" Name="txtComingInCall" Width="162" />
+            <Button Canvas.Left="671" Canvas.Top="12" Content="CallIn" Height="46" Name="btnCallIn" Width="104" Click="btnCallIn_Click" />
+            <my1:MapCtrlBoard Canvas.Left="476" Canvas.Top="100" Name="mapCtrlBoard" Height="388" Width="524" />
+        </Canvas>
+        <ToggleButton Content="&lt;&lt;" Canvas.Left="929" Canvas.Top="6" Height="43" Name="toggleBtnCtrlPanel" Width="59" Checked="toggleBtnCtrlPanel_Checked" Unchecked="toggleBtnCtrlPanel_Unchecked" />
+    </Canvas>
+</UserControl>

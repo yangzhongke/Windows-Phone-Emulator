@@ -1,0 +1,16 @@
+﻿<phone:PhoneApplicationPage x:Class="Microsoft.Phone.Internals.Pages.CallInPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    mc:Ignorable="d"
+    d:DesignHeight="390" d:DesignWidth="228">
+    
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="28,37,0,0" Name="txtNumber" Text="TextBlock" VerticalAlignment="Top" Width="138" />
+        <Button Content="Accept" Height="50" HorizontalAlignment="Left" Margin="49,108,0,0" Name="btnAccept" VerticalAlignment="Top" Width="108" />
+        <Button Content="Decline" Height="50" HorizontalAlignment="Left" Margin="49,164,0,0" Name="btnDecline" VerticalAlignment="Top" Width="108" Click="btnDecline_Click" />
+        <MediaElement Height="32" HorizontalAlignment="Left" Margin="137,49,0,0" Name="mediaElementRing" VerticalAlignment="Top" Width="29" Volume="1" Visibility="Collapsed" />
+    </Grid>
+</phone:PhoneApplicationPage>

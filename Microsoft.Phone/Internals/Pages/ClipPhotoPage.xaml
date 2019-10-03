@@ -1,0 +1,52 @@
+﻿<phone:PhoneApplicationPage x:Class="Microsoft.Phone.Internals.Pages.ClipPhotoPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    mc:Ignorable="d"
+    d:DesignHeight="390" d:DesignWidth="228" xmlns:my="clr-namespace:Microsoft.Phone.Internals.ctrls">
+	<phone:PhoneApplicationPage.Resources>
+<!--x:Key="PhoneThumb"-->
+		<Style x:Key="ThumbStyle1" TargetType="Thumb">
+			<Setter Property="Background" Value="{StaticResource PhoneRadioCheckBoxBrush}"/>
+			<Setter Property="BorderBrush" Value="{StaticResource PhoneRadioCheckBoxBrush}"/>
+			<Setter Property="BorderThickness" Value="{StaticResource PhoneBorderThickness}"/>
+			<Setter Property="Height" Value="24"/>
+			<Setter Property="Width" Value="24"/>
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="Thumb">
+						<Border Background="Transparent">
+							<VisualStateManager.VisualStateGroups>
+								<VisualStateGroup x:Name="CommonStates">
+									<VisualState x:Name="Normal"/>
+									<VisualState x:Name="MouseOver"/>
+									<VisualState x:Name="Pressed"/>
+									<VisualState x:Name="Disabled"/>
+								</VisualStateGroup>
+							</VisualStateManager.VisualStateGroups>
+							<Border x:Name="Border" IsHitTestVisible="False" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Margin="{StaticResource PhoneTouchTargetOverhang}" />
+						</Border>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>
+		<Storyboard x:Name="sbClipSuccess" Completed="sbClipSuccess_Completed">
+			<DoubleAnimation Duration="0:0:1" To="0" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="imgClip" d:IsOptimized="True"/>
+		</Storyboard>
+
+  
+
+	</phone:PhoneApplicationPage.Resources>
+    
+    <Grid x:Name="LayoutRoot" Background="Transparent" Loaded="LayoutRoot_Loaded">
+        <Image Height="228" Stretch="None" HorizontalAlignment="Left" Margin="0,0,0,0" Name="imgClip" VerticalAlignment="Top" Width="228" />
+        <Thumb Background="Transparent" Height="84" HorizontalAlignment="Left" Margin="0,0,0,0" Name="thumbClip" VerticalAlignment="Top" Width="96" Style="{StaticResource ThumbStyle1}" DragDelta="thumbClip_DragDelta">
+            <Thumb.RenderTransform>
+                <TranslateTransform x:Name="tr"></TranslateTransform>
+            </Thumb.RenderTransform>
+        </Thumb>
+        <my:IconButton HorizontalAlignment="Left" Margin="82,250,0,0" x:Name="btnOK" VerticalAlignment="Top" ImageSource="/Microsoft.Phone;component/Internals/icons/appbar.check.rest.png" Click="btnOK_Click" />
+    </Grid>
+</phone:PhoneApplicationPage>

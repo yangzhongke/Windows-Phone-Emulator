@@ -1,0 +1,18 @@
+﻿<phone:PhoneApplicationPage x:Class="Microsoft.Phone.Internals.Pages.PhoneCallPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    mc:Ignorable="d"
+    d:DesignHeight="390" d:DesignWidth="228">
+    
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="31,24,0,0" Name="txtDisplayName" Text="" VerticalAlignment="Top" Width="147" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="31,64,0,0" Name="txtNumber" Text="" VerticalAlignment="Top" Width="147" />
+        <Button Content="End Call" Height="45" HorizontalAlignment="Left" Margin="57,200,0,0" Name="btnEndCall" VerticalAlignment="Top" Width="102" Click="btnEndCall_Click" IsEnabled="False" />
+        <Button Content="Call" Height="41" HorizontalAlignment="Left" Margin="22,111,0,0" Name="btnCall" VerticalAlignment="Top" Width="80" Click="btnCall_Click" />
+        <Button Content="Don't Call" Height="41" HorizontalAlignment="Left" Margin="108,111,0,0" Name="btnNotCall" VerticalAlignment="Top" Width="97" Click="btnNotCall_Click" />
+        <MediaElement Height="32" HorizontalAlignment="Left" Margin="137,49,0,0" Name="mediaElementTone" VerticalAlignment="Top" Width="29" Volume="1" Visibility="Collapsed" />
+    </Grid>
+</phone:PhoneApplicationPage>

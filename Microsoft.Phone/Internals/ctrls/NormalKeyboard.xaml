@@ -1,0 +1,71 @@
+﻿<local:BaseKeyboard
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:Microsoft.Phone.Internals.ctrls"
+	mc:Ignorable="d"
+	x:Class="Microsoft.Phone.Internals.ctrls.NormalKeyboard"
+	d:DesignWidth="228" d:DesignHeight="228">
+	<Grid x:Name="LayoutRoot">
+		<StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Content="q" Width="21" Style="{StaticResource ButtonStyleKeyboardKey}"></Button>
+                <Button Content="w" Width="21" Style="{StaticResource ButtonStyleKeyboardKey}"></Button>
+                <Button Content="e" Width="21" Style="{StaticResource ButtonStyleKeyboardKey}"></Button>
+				<Button Content="r" Width="21" Style="{StaticResource ButtonStyleKeyboardKey}"></Button>
+                <Button Content="t" Width="21" Style="{StaticResource ButtonStyleKeyboardKey}"></Button>
+                <Button Content="y" Width="21" Style="{StaticResource ButtonStyleKeyboardKey}"></Button>
+				<Button Content="u" Width="21" Style="{StaticResource ButtonStyleKeyboardKey}"></Button>
+                <Button Content="i" Width="21" Style="{StaticResource ButtonStyleKeyboardKey}"></Button>
+                <Button Content="o" Width="21" Style="{StaticResource ButtonStyleKeyboardKey}"></Button>
+				<Button Content="p" Width="21" Style="{StaticResource ButtonStyleKeyboardKey}"></Button>
+            </StackPanel>
+			<StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+				<Button Content="a" Width="21" Style="{StaticResource ButtonStyleKeyboardKey}"></Button>
+                <Button Content="s" Width="21" Style="{StaticResource ButtonStyleKeyboardKey}"></Button>
+                <Button Content="d" Width="21" Style="{StaticResource ButtonStyleKeyboardKey}"></Button>
+				<Button Content="f" Width="21" Style="{StaticResource ButtonStyleKeyboardKey}"></Button>
+                <Button Content="j" Width="21" Style="{StaticResource ButtonStyleKeyboardKey}"></Button>
+                <Button Content="h" Width="21" Style="{StaticResource ButtonStyleKeyboardKey}"></Button>
+				<Button Content="j" Width="21" Style="{StaticResource ButtonStyleKeyboardKey}"></Button>
+                <Button Content="k" Width="21" Style="{StaticResource ButtonStyleKeyboardKey}"></Button>
+                <Button Content="l" Width="21" Style="{StaticResource ButtonStyleKeyboardKey}"></Button>
+			</StackPanel>
+			<StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+				<Button Content="↑" Width="30" Style="{StaticResource ButtonStyleKeyboardKey}" Tag="shift"></Button>
+                <Button Content="z" Width="21" Style="{StaticResource ButtonStyleKeyboardKey}"></Button>
+                <Button Content="x" Width="21" Style="{StaticResource ButtonStyleKeyboardKey}"></Button>
+				<Button Content="c" Width="21" Style="{StaticResource ButtonStyleKeyboardKey}"></Button>
+                <Button Content="v" Width="21" Style="{StaticResource ButtonStyleKeyboardKey}"></Button>
+                <Button Content="b" Width="21" Style="{StaticResource ButtonStyleKeyboardKey}"></Button>
+				<Button Content="n" Width="21" Style="{StaticResource ButtonStyleKeyboardKey}"></Button>
+                <Button Content="m" Width="21" Style="{StaticResource ButtonStyleKeyboardKey}"></Button>
+                <Button Width="40" Style="{StaticResource ButtonStyleKeyboardKey}" Tag="back">
+                    <Image Source="key_back.png" Stretch="None" />
+                </Button>
+			</StackPanel>
+			<StackPanel x:Name="normalStackPanel" Orientation="Horizontal" HorizontalAlignment="Center">
+				<Button Content="&amp;123" Width="30" Style="{StaticResource ButtonStyleKeyboardKey}" Tag="number"></Button>
+                <Button Content="," Width="21" Style="{StaticResource ButtonStyleKeyboardKey}"></Button>
+                <Button Content="space" Width="84" Style="{StaticResource ButtonStyleKeyboardKey}" Tag="space"></Button>
+				<Button Content="En" Width="21" Style="{StaticResource ButtonStyleKeyboardKey}" Tag="ime"></Button>
+                <Button Content="." Width="21" Style="{StaticResource ButtonStyleKeyboardKey}"></Button>
+                <Button Width="40" Style="{StaticResource ButtonStyleKeyboardKey}" Tag="return">
+                    <Image Source="key_return.png" Stretch="None" />
+                </Button>
+			</StackPanel>
+            <StackPanel x:Name="urlStackPanel" Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Content="&amp;123" Width="30" Style="{StaticResource ButtonStyleKeyboardKey}" Tag="number"></Button>
+                <Button Content="@" Width="21" Style="{StaticResource ButtonStyleKeyboardKey}"></Button>
+                <Button Content=".com" Width="30" Style="{StaticResource ButtonStyleKeyboardKey}"></Button>
+                <Button Content="space" Width="50" Style="{StaticResource ButtonStyleKeyboardKey}" Tag="space"></Button>
+                <Button Content="En" Width="21" Style="{StaticResource ButtonStyleKeyboardKey}" Tag="ime"></Button>
+                <Button Content="." Width="21" Style="{StaticResource ButtonStyleKeyboardKey}"></Button>
+                <Button Width="40" Style="{StaticResource ButtonStyleKeyboardKey}" Tag="return">
+                    <Image Source="key_return.png" Stretch="None" />
+                </Button>
+            </StackPanel>
+        </StackPanel>
+	</Grid>
+</local:BaseKeyboard>

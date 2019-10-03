@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="System.Device.Location.Internals.MapCtrlBoard"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    xmlns:map="clr-namespace:Microsoft.Maps.MapControl;assembly=Microsoft.Maps.MapControl"
+    d:DesignHeight="300" d:DesignWidth="400" xmlns:my="clr-namespace:Microsoft.Maps.MapControl;assembly=Microsoft.Maps.MapControl.Common">
+    
+    <Grid x:Name="LayoutRoot">
+        <map:Map x:Name="map"
+        CredentialsProvider="Aph73sxYljVugi5_WjkDmr42-NGUSgKoLAyNUS4u_nm9e-O95bp251hQfjiSaMye" 
+        Mode="Road" ScaleVisibility="Collapsed" LogoVisibility="Collapsed" MouseRightButtonDown="map_MouseRightButtonDown">
+            <Canvas Width="50" x:Name="canvasItcast"  Height="80" map:MapLayer.Position="40.0391586506311,116.312943328641" map:MapLayer.PositionOrigin="BottomCenter" Opacity="0.7">
+                <Path Data="M 0,0 L 50,0 50,50 25,80 0,50 0,0" Fill="Red" Stroke="Wheat" StrokeThickness="2" />
+                <TextBlock x:Name="txtItcast" FontSize="10" Foreground="White" Margin="5" TextAlignment="Center">
+                        传智播客<LineBreak />.Net培训<LineBreak />
+                </TextBlock>
+            </Canvas>
+        </map:Map>
+    </Grid>
+</UserControl>

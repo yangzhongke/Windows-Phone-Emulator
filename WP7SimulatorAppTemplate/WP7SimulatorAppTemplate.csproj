@@ -1,0 +1,338 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ExpressionBlendVersion>4.0.20525.0</ExpressionBlendVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9D3E94CC-3F46-4F80-890F-4CFF9F1A4C76}</ProjectGuid>
+    <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WP7SimulatorAppTemplate</RootNamespace>
+    <AssemblyName>WP7SimulatorAppTemplate</AssemblyName>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>WP7SimulatorAppTemplate.xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>WP7SimulatorAppTemplate.App</SilverlightAppEntry>
+    <TestPageFileName>TestPage.html</TestPageFileName>
+    <CreateTestPage>true</CreateTestPage>
+    <ValidateXaml>true</ValidateXaml>
+    <EnableOutOfBrowser>true</EnableOutOfBrowser>
+    <UsePlatformExtensions>false</UsePlatformExtensions>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <LinkedServerProject>
+    </LinkedServerProject>
+    <OutOfBrowserSettingsFile>Properties\OutOfBrowserSettings.xml</OutOfBrowserSettingsFile>
+    <Utf8Output>true</Utf8Output>
+  </PropertyGroup>
+  <!-- This property group is only here to support building this project using the
+		MSBuild 3.5 toolset. In order to work correctly with this older toolset, it needs 
+		to set the TargetFrameworkVersion to v3.5 -->
+  <PropertyGroup Condition="'$(MSBuildToolsVersion)' == '3.5'">
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FJ.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.CSharp, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Devices.Sensors, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Maps.MapControl, Version=1.0.1.0, Culture=neutral, PublicKeyToken=498d0d22d7936b73, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Maps.MapControl.Common, Version=1.0.1.0, Culture=neutral, PublicKeyToken=498d0d22d7936b73, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Phone, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Phone.Controls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Xna.Framework, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Xna.Framework.Input.Touch, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="MIGlibLight, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="MIRIA, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="mscorlib" />
+    <Reference Include="System.ComponentModel.DataAnnotations, Version=2.0.5.0, Culture=neutral, PublicKeyToken=ddd0da4d3e678217, processorArchitecture=MSIL" />
+    <Reference Include="System.Device, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Windows.Controls, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Controls.Data.Input, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Controls.Navigation, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Controls.Toolkit, Version=4.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Controls.Toolkit.Internals, Version=4.0.5.0, Culture=neutral, PublicKeyToken=2c5c654d367bf4a7, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Windows.Browser" />
+    <Reference Include="System.Xml.Linq, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="WAVMss, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+    <Page Include="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="lib\reg.bat" />
+    <None Include="Properties\AppManifest.xml" />
+    <EmbeddedResource Include="Properties\WMappManifest.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\OutOfBrowserSettings.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ApplicationIcon.png" />
+    <Content Include="Background.png" />
+    <Content Include="lib\System.Windows.Input.Manipulations.dll" />
+    <Content Include="SplashScreenImage.jpg" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="lib\ar\System.ComponentModel.DataAnnotations.resources.dll" />
+    <Content Include="lib\ar\System.Windows.Controls.Data.Input.resources.dll" />
+    <Content Include="lib\ar\System.Windows.Controls.resources.dll" />
+    <Content Include="lib\bg\System.ComponentModel.DataAnnotations.resources.dll" />
+    <Content Include="lib\bg\System.Windows.Controls.Data.Input.resources.dll" />
+    <Content Include="lib\bg\System.Windows.Controls.resources.dll" />
+    <Content Include="lib\ca\System.ComponentModel.DataAnnotations.resources.dll" />
+    <Content Include="lib\ca\System.Windows.Controls.Data.Input.resources.dll" />
+    <Content Include="lib\ca\System.Windows.Controls.resources.dll" />
+    <Content Include="lib\cs\System.ComponentModel.DataAnnotations.resources.dll" />
+    <Content Include="lib\cs\System.Windows.Controls.Data.Input.resources.dll" />
+    <Content Include="lib\cs\System.Windows.Controls.resources.dll" />
+    <Content Include="lib\da\System.ComponentModel.DataAnnotations.resources.dll" />
+    <Content Include="lib\da\System.Windows.Controls.Data.Input.resources.dll" />
+    <Content Include="lib\da\System.Windows.Controls.resources.dll" />
+    <Content Include="lib\de\Microsoft.CSharp.resources.dll" />
+    <Content Include="lib\de\System.ComponentModel.DataAnnotations.resources.dll" />
+    <Content Include="lib\de\System.Windows.Controls.Data.Input.resources.dll" />
+    <Content Include="lib\de\System.Windows.Controls.Navigation.resources.dll" />
+    <Content Include="lib\de\System.Windows.Controls.resources.dll" />
+    <Content Include="lib\de\System.Xml.Linq.resources.dll" />
+    <Content Include="lib\de\System.Xml.Serialization.resources.dll" />
+    <Content Include="lib\el\System.ComponentModel.DataAnnotations.resources.dll" />
+    <Content Include="lib\el\System.Windows.Controls.Data.Input.resources.dll" />
+    <Content Include="lib\el\System.Windows.Controls.resources.dll" />
+    <Content Include="lib\es\Microsoft.CSharp.resources.dll" />
+    <Content Include="lib\es\System.ComponentModel.DataAnnotations.resources.dll" />
+    <Content Include="lib\es\System.Windows.Controls.Data.Input.resources.dll" />
+    <Content Include="lib\es\System.Windows.Controls.Navigation.resources.dll" />
+    <Content Include="lib\es\System.Windows.Controls.resources.dll" />
+    <Content Include="lib\es\System.Xml.Linq.resources.dll" />
+    <Content Include="lib\es\System.Xml.Serialization.resources.dll" />
+    <Content Include="lib\et\System.ComponentModel.DataAnnotations.resources.dll" />
+    <Content Include="lib\et\System.Windows.Controls.Data.Input.resources.dll" />
+    <Content Include="lib\et\System.Windows.Controls.resources.dll" />
+    <Content Include="lib\eu\System.ComponentModel.DataAnnotations.resources.dll" />
+    <Content Include="lib\eu\System.Windows.Controls.Data.Input.resources.dll" />
+    <Content Include="lib\eu\System.Windows.Controls.resources.dll" />
+    <Content Include="lib\fi\System.ComponentModel.DataAnnotations.resources.dll" />
+    <Content Include="lib\fi\System.Windows.Controls.Data.Input.resources.dll" />
+    <Content Include="lib\fi\System.Windows.Controls.resources.dll" />
+    <Content Include="lib\FJ.Core.dll" />
+    <Content Include="lib\fr\Microsoft.CSharp.resources.dll" />
+    <Content Include="lib\fr\System.ComponentModel.DataAnnotations.resources.dll" />
+    <Content Include="lib\fr\System.Windows.Controls.Data.Input.resources.dll" />
+    <Content Include="lib\fr\System.Windows.Controls.Navigation.resources.dll" />
+    <Content Include="lib\fr\System.Windows.Controls.resources.dll" />
+    <Content Include="lib\fr\System.Xml.Linq.resources.dll" />
+    <Content Include="lib\fr\System.Xml.Serialization.resources.dll" />
+    <Content Include="lib\gacutil.exe" />
+    <Content Include="lib\he\System.ComponentModel.DataAnnotations.resources.dll" />
+    <Content Include="lib\he\System.Windows.Controls.Data.Input.resources.dll" />
+    <Content Include="lib\he\System.Windows.Controls.resources.dll" />
+    <Content Include="lib\hr\System.ComponentModel.DataAnnotations.resources.dll" />
+    <Content Include="lib\hr\System.Windows.Controls.Data.Input.resources.dll" />
+    <Content Include="lib\hr\System.Windows.Controls.resources.dll" />
+    <Content Include="lib\hu\System.ComponentModel.DataAnnotations.resources.dll" />
+    <Content Include="lib\hu\System.Windows.Controls.Data.Input.resources.dll" />
+    <Content Include="lib\hu\System.Windows.Controls.resources.dll" />
+    <Content Include="lib\id\System.ComponentModel.DataAnnotations.resources.dll" />
+    <Content Include="lib\id\System.Windows.Controls.Data.Input.resources.dll" />
+    <Content Include="lib\id\System.Windows.Controls.resources.dll" />
+    <Content Include="lib\Itcast.Net.Phone.InteropServices.dll" />
+    <Content Include="lib\Itcast.Net.Phone.InteropServices.pdb" />
+    <Content Include="lib\it\Microsoft.CSharp.resources.dll" />
+    <Content Include="lib\it\System.ComponentModel.DataAnnotations.resources.dll" />
+    <Content Include="lib\it\System.Windows.Controls.Data.Input.resources.dll" />
+    <Content Include="lib\it\System.Windows.Controls.Navigation.resources.dll" />
+    <Content Include="lib\it\System.Windows.Controls.resources.dll" />
+    <Content Include="lib\it\System.Xml.Linq.resources.dll" />
+    <Content Include="lib\it\System.Xml.Serialization.resources.dll" />
+    <Content Include="lib\ja\Microsoft.CSharp.resources.dll" />
+    <Content Include="lib\ja\System.ComponentModel.DataAnnotations.resources.dll" />
+    <Content Include="lib\ja\System.Windows.Controls.Data.Input.resources.dll" />
+    <Content Include="lib\ja\System.Windows.Controls.Navigation.resources.dll" />
+    <Content Include="lib\ja\System.Windows.Controls.resources.dll" />
+    <Content Include="lib\ja\System.Xml.Linq.resources.dll" />
+    <Content Include="lib\ja\System.Xml.Serialization.resources.dll" />
+    <Content Include="lib\ko\Microsoft.CSharp.resources.dll" />
+    <Content Include="lib\ko\System.ComponentModel.DataAnnotations.resources.dll" />
+    <Content Include="lib\ko\System.Windows.Controls.Data.Input.resources.dll" />
+    <Content Include="lib\ko\System.Windows.Controls.Navigation.resources.dll" />
+    <Content Include="lib\ko\System.Windows.Controls.resources.dll" />
+    <Content Include="lib\ko\System.Xml.Linq.resources.dll" />
+    <Content Include="lib\ko\System.Xml.Serialization.resources.dll" />
+    <Content Include="lib\lt\System.ComponentModel.DataAnnotations.resources.dll" />
+    <Content Include="lib\lt\System.Windows.Controls.Data.Input.resources.dll" />
+    <Content Include="lib\lt\System.Windows.Controls.resources.dll" />
+    <Content Include="lib\lv\System.ComponentModel.DataAnnotations.resources.dll" />
+    <Content Include="lib\lv\System.Windows.Controls.Data.Input.resources.dll" />
+    <Content Include="lib\lv\System.Windows.Controls.resources.dll" />
+    <Content Include="lib\Microsoft.CSharp.dll" />
+    <Content Include="lib\Microsoft.Devices.Sensors.dll" />
+    <Content Include="lib\Microsoft.Devices.Sensors.pdb" />
+    <Content Include="lib\Microsoft.Maps.MapControl.Common.dll" />
+    <Content Include="lib\Microsoft.Maps.MapControl.Common.xml" />
+    <Content Include="lib\Microsoft.Maps.MapControl.dll" />
+    <Content Include="lib\Microsoft.Maps.MapControl.xml" />
+    <Content Include="lib\Microsoft.Phone.Controls.dll" />
+    <Content Include="lib\Microsoft.Phone.Controls.pdb" />
+    <Content Include="lib\Microsoft.Phone.Controls.Toolkit.dll" />
+    <Content Include="lib\Microsoft.Phone.Controls.Toolkit.pdb" />
+    <Content Include="lib\Microsoft.Phone.dll" />
+    <Content Include="lib\Microsoft.Phone.pdb" />
+    <Content Include="lib\Microsoft.Xna.Framework.dll" />
+    <Content Include="lib\Microsoft.Xna.Framework.Input.Touch.dll" />
+    <Content Include="lib\Microsoft.Xna.Framework.Input.Touch.pdb" />
+    <Content Include="lib\Microsoft.Xna.Framework.pdb" />
+    <Content Include="lib\MIGlibLight.dll" />
+    <Content Include="lib\MIRIA.dll" />
+    <Content Include="lib\ms\System.ComponentModel.DataAnnotations.resources.dll" />
+    <Content Include="lib\ms\System.Windows.Controls.Data.Input.resources.dll" />
+    <Content Include="lib\ms\System.Windows.Controls.resources.dll" />
+    <Content Include="lib\nl\System.ComponentModel.DataAnnotations.resources.dll" />
+    <Content Include="lib\nl\System.Windows.Controls.Data.Input.resources.dll" />
+    <Content Include="lib\nl\System.Windows.Controls.resources.dll" />
+    <Content Include="lib\no\System.ComponentModel.DataAnnotations.resources.dll" />
+    <Content Include="lib\no\System.Windows.Controls.Data.Input.resources.dll" />
+    <Content Include="lib\no\System.Windows.Controls.resources.dll" />
+    <Content Include="lib\pl\System.ComponentModel.DataAnnotations.resources.dll" />
+    <Content Include="lib\pl\System.Windows.Controls.Data.Input.resources.dll" />
+    <Content Include="lib\pl\System.Windows.Controls.resources.dll" />
+    <Content Include="lib\pt-BR\System.ComponentModel.DataAnnotations.resources.dll" />
+    <Content Include="lib\pt-BR\System.Windows.Controls.Data.Input.resources.dll" />
+    <Content Include="lib\pt-BR\System.Windows.Controls.resources.dll" />
+    <Content Include="lib\pt\System.ComponentModel.DataAnnotations.resources.dll" />
+    <Content Include="lib\pt\System.Windows.Controls.Data.Input.resources.dll" />
+    <Content Include="lib\pt\System.Windows.Controls.resources.dll" />
+    <Content Include="lib\RegAsm.exe" />
+    <Content Include="lib\ro\System.ComponentModel.DataAnnotations.resources.dll" />
+    <Content Include="lib\ro\System.Windows.Controls.Data.Input.resources.dll" />
+    <Content Include="lib\ro\System.Windows.Controls.resources.dll" />
+    <Content Include="lib\ru\Microsoft.CSharp.resources.dll" />
+    <Content Include="lib\ru\System.ComponentModel.DataAnnotations.resources.dll" />
+    <Content Include="lib\ru\System.Windows.Controls.Data.Input.resources.dll" />
+    <Content Include="lib\ru\System.Windows.Controls.Navigation.resources.dll" />
+    <Content Include="lib\ru\System.Windows.Controls.resources.dll" />
+    <Content Include="lib\ru\System.Xml.Linq.resources.dll" />
+    <Content Include="lib\ru\System.Xml.Serialization.resources.dll" />
+    <Content Include="lib\sk\System.ComponentModel.DataAnnotations.resources.dll" />
+    <Content Include="lib\sk\System.Windows.Controls.Data.Input.resources.dll" />
+    <Content Include="lib\sk\System.Windows.Controls.resources.dll" />
+    <Content Include="lib\sl\System.ComponentModel.DataAnnotations.resources.dll" />
+    <Content Include="lib\sl\System.Windows.Controls.Data.Input.resources.dll" />
+    <Content Include="lib\sl\System.Windows.Controls.resources.dll" />
+    <Content Include="lib\sr-Cyrl-CS\System.ComponentModel.DataAnnotations.resources.dll" />
+    <Content Include="lib\sr-Cyrl-CS\System.Windows.Controls.Data.Input.resources.dll" />
+    <Content Include="lib\sr-Cyrl-CS\System.Windows.Controls.resources.dll" />
+    <Content Include="lib\sr-Latn-CS\System.ComponentModel.DataAnnotations.resources.dll" />
+    <Content Include="lib\sr-Latn-CS\System.Windows.Controls.Data.Input.resources.dll" />
+    <Content Include="lib\sr-Latn-CS\System.Windows.Controls.resources.dll" />
+    <Content Include="lib\sv\System.ComponentModel.DataAnnotations.resources.dll" />
+    <Content Include="lib\sv\System.Windows.Controls.Data.Input.resources.dll" />
+    <Content Include="lib\sv\System.Windows.Controls.resources.dll" />
+    <Content Include="lib\System.ComponentModel.DataAnnotations.dll" />
+    <Content Include="lib\System.Device.dll" />
+    <Content Include="lib\System.Device.pdb" />
+    <Content Include="lib\System.Windows.Controls.Data.Input.dll" />
+    <Content Include="lib\System.Windows.Controls.dll" />
+    <Content Include="lib\System.Windows.Controls.Navigation.dll" />
+    <Content Include="lib\System.Windows.Controls.Toolkit.dll" />
+    <Content Include="lib\System.Windows.Controls.Toolkit.Internals.dll" />
+    <Content Include="lib\System.Windows.Controls.Toolkit.pdb" />
+    <Content Include="lib\System.Windows.Controls.Toolkit.xml" />
+    <Content Include="lib\System.Xml.Linq.dll" />
+    <Content Include="lib\System.Xml.Serialization.dll" />
+    <Content Include="lib\th\System.ComponentModel.DataAnnotations.resources.dll" />
+    <Content Include="lib\th\System.Windows.Controls.Data.Input.resources.dll" />
+    <Content Include="lib\th\System.Windows.Controls.resources.dll" />
+    <Content Include="lib\tr\System.ComponentModel.DataAnnotations.resources.dll" />
+    <Content Include="lib\tr\System.Windows.Controls.Data.Input.resources.dll" />
+    <Content Include="lib\tr\System.Windows.Controls.resources.dll" />
+    <Content Include="lib\uk\System.ComponentModel.DataAnnotations.resources.dll" />
+    <Content Include="lib\uk\System.Windows.Controls.Data.Input.resources.dll" />
+    <Content Include="lib\uk\System.Windows.Controls.resources.dll" />
+    <Content Include="lib\vi\System.ComponentModel.DataAnnotations.resources.dll" />
+    <Content Include="lib\vi\System.Windows.Controls.Data.Input.resources.dll" />
+    <Content Include="lib\vi\System.Windows.Controls.resources.dll" />
+    <Content Include="lib\WAVMss.dll" />
+    <Content Include="lib\zh-Hans\Microsoft.CSharp.resources.dll" />
+    <Content Include="lib\zh-Hans\System.ComponentModel.DataAnnotations.resources.dll" />
+    <Content Include="lib\zh-Hans\System.Windows.Controls.Data.Input.resources.dll" />
+    <Content Include="lib\zh-Hans\System.Windows.Controls.Navigation.resources.dll" />
+    <Content Include="lib\zh-Hans\System.Windows.Controls.resources.dll" />
+    <Content Include="lib\zh-Hans\System.Xml.Linq.resources.dll" />
+    <Content Include="lib\zh-Hans\System.Xml.Serialization.resources.dll" />
+    <Content Include="lib\zh-Hant\Microsoft.CSharp.resources.dll" />
+    <Content Include="lib\zh-Hant\System.ComponentModel.DataAnnotations.resources.dll" />
+    <Content Include="lib\zh-Hant\System.Windows.Controls.Data.Input.resources.dll" />
+    <Content Include="lib\zh-Hant\System.Windows.Controls.Navigation.resources.dll" />
+    <Content Include="lib\zh-Hant\System.Windows.Controls.resources.dll" />
+    <Content Include="lib\zh-Hant\System.Xml.Linq.resources.dll" />
+    <Content Include="lib\zh-Hant\System.Xml.Serialization.resources.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{A1591282-1198-4647-A2B1-27E5FF5F6F3B}">
+        <SilverlightProjectProperties />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	     Other similar extension points exist, see Microsoft.Common.targets.
+	<Target Name="BeforeBuild">
+	</Target>
+	<Target Name="AfterBuild">
+	</Target>
+	-->
+</Project>

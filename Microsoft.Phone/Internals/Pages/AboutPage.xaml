@@ -1,0 +1,29 @@
+﻿<phone:PhoneApplicationPage x:Class="Microsoft.Phone.Internals.Pages.AboutPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    mc:Ignorable="d"
+    d:DesignHeight="390" d:DesignWidth="228">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <TextBox Height="296" HorizontalAlignment="Left" Margin="12,82,0,0" Name="textBox1" VerticalAlignment="Top" Width="198" TextWrapping="Wrap" Text="这个模拟器冠名传智播客.Net培训，但是我个人的作品。这个模拟器使用了MIRIA、FluxJpeg等开源项目，很多代码从Silverlight For WP7、AppMakr中拷贝修改而成，这其中可能有侵权，但为了推广WP7，让更多人学习WP7开发，我愿意承担一切相关风险。感谢被我借鉴的产品，为了WP7的未来，恳求你们默许我的侵权。" IsReadOnly="True" />
+        <HyperlinkButton Content="传智播客.Net培训学费只要5800元" Height="23" HorizontalAlignment="Left" Margin="12,12,0,0" Name="linkAd1" VerticalAlignment="Top" Width="198" Click="linkAd1_Click" />
+        <HyperlinkButton Content="迎校庆传智播客.Net基础班只要200元" Height="23" HorizontalAlignment="Left" Margin="12,42,0,0" Name="linkAd2" VerticalAlignment="Top" Width="204" Click="linkAd1_Click" />
+    </Grid>
+
+    <!--Sample code showing usage of ApplicationBar-->
+    <!--<phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" Text="Button 1"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="Button 2"/>
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="MenuItem 1"/>
+                <shell:ApplicationBarMenuItem Text="MenuItem 2"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>-->
+</phone:PhoneApplicationPage>
